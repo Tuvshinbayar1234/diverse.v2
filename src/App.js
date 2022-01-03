@@ -103,7 +103,7 @@ function App(){
       {/* mobile */}
       <div className="container mx-auto py-20 block sm:hidden">
         <div className="">
-          <h1 className=" text-4xl text-center" style={{fontFamily:'MagistralRegular'}}>Холбоо барих</h1>
+          <h1 className=" text-4xl text-center" style={{fontFamily: 'Magistral'}}>Холбоо барих</h1>
         </div>
         <div className="flex flex-col justify-start items-start mx-12 py-10">
           <div className="w-6/12 flex flex-col justify-start">

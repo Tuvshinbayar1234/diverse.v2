@@ -2,7 +2,7 @@ import React from 'react'
 
 const WeWork = () => {
     return (
-        <div className='w-full pt-10 sm:py-10 px-5'>
+        <div className='w-full pt-10 pb-20 sm:py-10 px-5'>
             <div className='container mx-auto hidden xl:block'>
                 <div className='flex justify-between w-full '>
                     <span id='WeWork' class="relative w-128 h-72 flex-col inline-flex justify-center border-black rounded-2xl border-4">
@@ -46,7 +46,7 @@ const WeWork = () => {
                     <h1 className='text-2xl w-9/12 font-bold' style={{fontFamily: 'Magistral'}}>Blockchain architecture</h1>
                     <p className=' w-full' style={{fontFamily:'MagistralRegular'}}>Бид харилцагчдынхаа хэрэглээнд тохирсон Dapp-н блокчэйн архитехтурыг гаргаж, хамгийн дэвшилтэт шийдлийг хүргэх болно.</p>    
                     </span>
-                    <span class="w-full h-40 pt-5 flex-col flex justify-center rounded-2xl">
+                    <span class="w-full h-40 pt-40 flex-col flex justify-center rounded-2xl">
                     <h1 className='text-2xl text-left font-bold w-3/12' style={{fontFamily: 'Magistral'}}>Blockchain зөвлөгөө</h1>
                         <p className=' w-full mx-1' style={{fontFamily:'MagistralRegular'}}>Бид харилцагчдынхаа бизнесийн онцлог, хэрэгцээг харгалзан үзэж, блокчэйн шийдлийн гарааны болон цаашдын төлөвлөгөөнд зөвлөж байна.</p>
                         
