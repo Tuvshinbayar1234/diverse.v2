@@ -20,7 +20,7 @@ export default class AlertSuccess extends Component {
     render() {
         return (
             <div className="">
-                <button class="py-4 rounded-lg w-72 sm:w-44 text-center text-white hover:bg-blue-400 bg-blue-500 cursor-pointer" onClick={this.HandleClick}>
+                <button class="py-4 rounded-lg w-72 sm:w-44 text-center text-white hover:bg-blue-400 bg-blue-500 cursor-pointer" style={{fontFamily: 'Magistral'}} onClick={this.HandleClick}>
                     Илгээх
                 </button>
             </div>

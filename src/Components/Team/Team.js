@@ -76,14 +76,14 @@ const Team = () => {
                 <h1 id="Team" className='text-4xl' style={{fontFamily: 'Magistral'}}>Манай хамт олон</h1>
             </div>
             <div className="hidden lg:block">
-                <div className="flex items-center justify-between space-x-4 py-5">
+                <div className="flex items-center justify-between space-x-4 py-5 pt-10">
                     {Team.map((i , x) => {
                         return(
                         <div key={x} className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                             <div className="">
                                 <img alt='IMAGE' width={'140px'} height={'188px'} src={i.img} />
-                                <h1 className="pt-3 text-sm font-bold">{i.name}</h1>
-                                <p className="lg:text-xs sm:text-xs pb-3">{i.title}</p>
+                                <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>{i.name}</h1>
+                                <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>{i.title}</p>
                             </div>
                         </div>
                         )
@@ -97,8 +97,8 @@ const Team = () => {
                         <div key={x} className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                             <div className="">
                                 <img alt='IMAGE' width={'140px'} height={'188px'} src={i.img} />
-                                <h1 className="pt-3 text-sm font-bold">{i.name}</h1>
-                                <p className="lg:text-xs sm:text-xs pb-3">{i.title}</p>
+                                <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>{i.name}</h1>
+                                <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>{i.title}</p>
                             </div>
                         </div>
                         )
@@ -110,36 +110,36 @@ const Team = () => {
                     <div className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                         <div className="">
                             <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-3 text-sm font-bold">Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-3">Secretary</p>
+                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
+                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
                         </div>
                     </div>
                     <div className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                         <div className="">
                             <img alt='IMAGE' width={'140px'} height={'188px'} src={amaraa} />
-                            <h1 className="pt-3 text-sm font-bold">А. Амартүвшин</h1>
-                            <p className="lg:text-xs sm:text-xs pb-3">Blockchain Consultant</p>
+                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>А. Амартүвшин</h1>
+                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Blockchain Consultant</p>
                         </div>
                     </div>
                     <div className="flex opacity-0 justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                         <div className="">
                             <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-3 text-sm font-bold">Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-3">Secretary</p>
+                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
+                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
                         </div>
                     </div>
                     <div className="flex opacity-0 justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                         <div className="">
                             <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-3 text-sm font-bold">Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-3">Secretary</p>
+                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
+                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
                         </div>
                     </div>
                     <div className="flex opacity-0 justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
                         <div className="">
                             <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-3 text-sm font-bold">Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-3">Secretary</p>
+                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
+                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
                         </div>
                     </div>
                 </div>

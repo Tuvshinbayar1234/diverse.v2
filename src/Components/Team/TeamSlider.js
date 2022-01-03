@@ -161,7 +161,7 @@ const TeamSlider = () => {
         <div className="lg:hidden block w-full container mx-auto">
             <div className=" text-lg px-3 pb-5 flex justify-between items-center">
                 <h1>Манай хамт олон</h1>
-                <p onClick={openModal} className="text-xs cursor-pointer">Бүгдийг үзэх</p>
+                <p onClick={openModal} className="text-xs cursor-pointer" style={{fontFamily:'MagistralRegular'}}>Бүгдийг үзэх</p>
             </div>
             <div className='flex overflow-x-scroll pb-4'>
             {Team.map((i, x) => {
@@ -170,8 +170,8 @@ const TeamSlider = () => {
                     <div key={x} className="flex justify-center items-center w-48 h-64">
                         <div className="">
                             <img alt='image' width={'140px'} height={'188px'} src={i.img} />
-                            <h1 className="pt-3 text-xs font-bold">{i.name}</h1>
-                            <p className="text-xs pb-3">{i.title}</p>
+                            <h1 className="pt-3 text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>{i.name}</h1>
+                            <p className="text-xs pb-3" style={{fontFamily:'MagistralRegular'}}>{i.title}</p>
                         </div>
                     </div>
                 </div>                    
@@ -194,7 +194,7 @@ const TeamSlider = () => {
                                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
                                     <div className="flex flex-col items-center p-5 w-full">
                                         <div className="flex justify-start w-full">
-                                            <p onClick={closeModal} className="text-left cursor-pointer">Буцах</p>
+                                            <p onClick={closeModal} className="text-left cursor-pointer" style={{fontFamily:'MagistralRegular'}}>Буцах</p>
                                         </div>
                                         <div className="flex justify-center items-center">
                                             <h1 className="text-center">Манай хамт олон</h1>
@@ -209,8 +209,8 @@ const TeamSlider = () => {
                                                     <div key={x} className="flex justify-center items-center w-48 h-64">
                                                         <div className="">
                                                             <img alt='image' width={'140px'} height={'188px'} src={i.img} />
-                                                            <h1 className="pt-3 text-xs font-bold">{i.name}</h1>
-                                                            <p className="text-xs pb-3">{i.title}</p>
+                                                            <h1 className="pt-3 text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>{i.name}</h1>
+                                                            <p className="text-xs pb-3" style={{fontFamily:'MagistralRegular'}}>{i.title}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -224,8 +224,8 @@ const TeamSlider = () => {
                                                     <div key={x} className="flex justify-center items-center w-48 h-64">
                                                         <div className="">
                                                             <img alt='image' width={'140px'} height={'188px'} src={i.img} />
-                                                            <h1 className="pt-3 text-xs font-bold">{i.name}</h1>
-                                                            <p className="text-xs pb-3">{i.title}</p>
+                                                            <h1 className="pt-3 text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>{i.name}</h1>
+                                                            <p className="text-xs pb-3" style={{fontFamily:'MagistralRegular'}}>{i.title}</p>
                                                         </div>
                                                     </div>
                                                 </div>

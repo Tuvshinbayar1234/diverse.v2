@@ -18,22 +18,22 @@ const Nav = () => {
                     </div>
                     <ul className='flex w-2/5 justify-between items-center'>
                         <a href='#We'>
-                            <li>
+                            <li style={{fontFamily:'MagistralRegular'}}>
                                 Бид
                             </li>
                         </a>
                         <a href='#WeWork'>
-                            <li>
+                            <li style={{fontFamily:'MagistralRegular'}}>
                                 Бид юу хийдэг вэ
                             </li>
                         </a>
                         <a href='#Team'>
-                            <li>
+                            <li style={{fontFamily:'MagistralRegular'}}>
                                 Манай хамт олон
                             </li>
                         </a>
                         <a href='#Project'>
-                            <li>
+                            <li style={{fontFamily:'MagistralRegular'}}>
                                 Төслүүд
                             </li>
                         </a>

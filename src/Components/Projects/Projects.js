@@ -171,18 +171,18 @@ const Projects = () => {
         <div className='w-full py-20 hidden xl:block'>
             <div className='container mx-auto px-5'>
                 <div className=''>
-                    <h1 id='Project' className='text-4xl font-bold'>Төслүүд</h1>
+                    <h1 id='Project' className='text-4xl font-bold' style={{fontFamily: 'Magistral'}}>Төслүүд</h1>
                 </div>
                 <div className='flex'>
                     <div className='flex justify-between'>
                         <div className='w-2/4 flex flex-col justify-evenly'>
                             <div className='py-2'>
-                                <h1 className='font-bold text-2xl px-2'>Хөгжүүлэлт</h1>
-                                <p className='py-2 px-2 text-sm'>Бид хэрэглэгчдийнхээ онцлогийг шинжлэн, хэрэгцээнд зориулсан дизайн, брэндинг, вэбсайт, вэб болон утасны апп, блокчэйн дээр суурилсан токен, dapp-н ухаалаг гэрээг хөгжүүлж байна. Бид Монголын анхны төгрөгтэй 1:1 үнэ цэнтэй стэйблкойн болон Монголын анхны төвлөрсөн бус санхүүгийн систем болох ArdMoney төслийг гардан хэрэгжүүлж байгаа болно.</p>
+                                <h1 className='font-bold text-2xl px-2' style={{fontFamily:'MagistralRegular'}}>Хөгжүүлэлт</h1>
+                                <p className='py-2 px-2 text-sm w-4/5' style={{fontFamily:'MagistralRegular'}}>Бид хэрэглэгчдийнхээ онцлогийг шинжлэн, хэрэгцээнд зориулсан дизайн, брэндинг, вэбсайт, вэб болон утасны апп, блокчэйн дээр суурилсан токен, dapp-н ухаалаг гэрээг хөгжүүлж байна. Бид Монголын анхны төгрөгтэй 1:1 үнэ цэнтэй стэйблкойн болон Монголын анхны төвлөрсөн бус санхүүгийн систем болох ArdMoney төслийг гардан хэрэгжүүлж байгаа болно.</p>
                             </div>
                             <div className=''>
-                                <h1 className='font-bold text-2xl px-2'>Зөвлөх</h1>
-                                <p className='px-2 text-sm'>Блокчэйн болон бусад дэвшилтэт технологийн шийдлийг таны бизнест тохируулан боловсруулж, зөвлөж өгөх болно. Манай харилцагчид мөн бидний улирал бүр гаргах технологийн тайлангуудыг хамгийн түрүүнд хүлээн авдаг.</p>
+                                <h1 className='font-bold text-2xl px-2' style={{fontFamily:'MagistralRegular'}}>Зөвлөх</h1>
+                                <p className='px-2 text-sm w-4/5' style={{fontFamily:'MagistralRegular'}}>Блокчэйн болон бусад дэвшилтэт технологийн шийдлийг таны бизнест тохируулан боловсруулж, зөвлөж өгөх болно. Манай харилцагчид мөн бидний улирал бүр гаргах технологийн тайлангуудыг хамгийн түрүүнд хүлээн авдаг.</p>
                                 {/* <p className='px-2 py-2'>Манай компани нь 2020 онд Монгол Улсад мэдээллийн технологийн чиглэлээр үйл ажиллагаа эрхлэхээр үүсгэн байгуулагдсан бөгөөд бид одоогоор 4 бүтээгдэхүүнийг амжилттай хөгжүүлээд хэрэглээнд нэвтрүүлсэн байна.</p> */}
                             </div>
                         </div>
@@ -208,7 +208,7 @@ const Projects = () => {
                                                     <h1 onClick={() => closedAlert()} className='text-3xl text-white cursor-pointer flex justify-end'><FaAngleLeft /></h1>
                                                     <div className=''><h1 className='text-left text-2xl pb-2 px-2'>{selectedProject[0].name}</h1></div>
                                                 </div>
-                                                <p className='text-sm text-justify px-2' style={{textIndent: '27px'}}>{selectedProject[0].description}</p>
+                                                <p className='text-sm text-justify px-2' style={{textIndent: '27px' , fontFamily:'MagistralRegular'}}>{selectedProject[0].description}</p>
                                             </div>
                                         </div>
                                             <div className='w-full flex justify-end'>
@@ -216,13 +216,13 @@ const Projects = () => {
                                                     <div className='text-white flex flex-col justify-center w-full px-10'>
                                                         <h1 className='font-bold text-2xl'>Хийсэн ажлууд</h1>
                                                         <div className='flex space-x-32 w-full pt-2'>
-                                                            <div className='flex flex-col justify-start items-start'>
+                                                            <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                                 <p className='text-xs'>• {selectedProject[0].development1}</p>
                                                                 <p className='text-xs'>• {selectedProject[0].development2}</p>
                                                                 <p className='text-xs'>• {selectedProject[0].development3}</p>
                                                                 
                                                             </div>
-                                                            <div className='flex flex-col justify-start items-start'>
+                                                            <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                                 <p className='text-xs'>• {selectedProject[0].development4}</p>
                                                                 <p className='text-xs'>• {selectedProject[0].development5}</p>
                                                                 <p className='text-xs'>• {selectedProject[0].development6}</p>
@@ -252,7 +252,7 @@ const Projects = () => {
                                                     <div className='text-white w-full flex flex-col pl-5'>
                                                     <div className='flex flex-col justify-center px-1 pt-5'>
                                                     <a className='text-2xl' href={selectedProduct[0].link} rel="noreferrer" target="_blank">{selectedProduct[0].name}</a>
-                                                        <p className='text-white text-sm' style={{textIndent: '27px'}}>{selectedProduct[0].description}</p>
+                                                        <p className='text-white text-sm' style={{textIndent: '27px' , fontFamily: 'MagistralRegular'}}>{selectedProduct[0].description}</p>
                                                     </div>
                                                             
                                                     </div>
@@ -267,12 +267,12 @@ const Projects = () => {
                                             <div className='text-white flex justify-center flex-col  w-9/12'>
                                                 <h1 className='font-bold text-2xl pl-8'>Хийсэн ажлууд</h1>
                                                 <div className='flex space-x-32 pl-8 pt-2 w-full'>
-                                                    <div className='flex flex-col justify-start items-start'>
+                                                    <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                         <p className='text-xs'>• {selectedProduct[0].development1}</p>
                                                         <p className='text-xs'>• {selectedProduct[0].development2}</p>
                                                         <p className='text-xs'>• {selectedProduct[0].development3}</p>
                                                     </div>
-                                                    <div className='flex flex-col justify-start items-start'>
+                                                    <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                         <p className='text-xs'>• {selectedProduct[0].development4}</p>
                                                         <p className='text-xs'>• {selectedProduct[0].development5}</p>
                                                         <p className='text-xs'>• {selectedProduct[0].development6}</p>

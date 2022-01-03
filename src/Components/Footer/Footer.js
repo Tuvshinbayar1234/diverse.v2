@@ -12,16 +12,16 @@ const Footer = () => {
                     </div>
                     <div className='text-white text-xs'>
                         <div className='flex space-x-2'>
-                            <h1>Имайл:</h1>
-                            <span>info@dsolutions.mn</span>
+                            <h1 style={{fontFamily:'MagistralRegular'}}>Имайл:</h1>
+                            <span style={{fontFamily:'MagistralRegular'}}>info@dsolutions.mn</span>
                         </div>
                         <div className='py-5 flex space-x-5'>
-                            <h1>Хаяг:</h1>
-                            <span>Сүхбаатар дүүрэг, 8-р хороо, Централ цамхаг, 17 давхар Өдөр бүр</span>
+                            <h1 style={{fontFamily:'MagistralRegular'}}>Хаяг:</h1>
+                            <span style={{fontFamily:'MagistralRegular'}}>Сүхбаатар дүүрэг, 8-р хороо, Централ цамхаг, 17 давхар Өдөр бүр</span>
                         </div>
                         <div className='flex space-x-5'>
-                            <h1>Утас:</h1>
-                            <span>+976 91951199</span>
+                            <h1 style={{fontFamily:'MagistralRegular'}}>Утас:</h1>
+                            <span style={{fontFamily:'MagistralRegular'}}>+976 91951199</span>
                         </div>
                         <div className='flex text-xl space-x-5 py-5'>
                         <a className=' cursor-pointer' href='https://www.instagram.com/diverse.solutions/' target='_blank'><FaInstagram /></a> 
@@ -39,16 +39,16 @@ const Footer = () => {
                     </div>
                     <div className=' w-6/12 text-xs text-white'>
                         <div className='flex space-x-2'>
-                            <p>Имайл:</p>
-                            <p>info@dsolutions.mn</p>
+                            <p style={{fontFamily:'MagistralRegular'}}>Имайл:</p>
+                            <p style={{fontFamily:'MagistralRegular'}}>info@dsolutions.mn</p>
                         </div>
                         <div className='py-3 flex space-x-5'>
-                            <p>Хаяг:</p>
-                            <p>Цэнтрал товер 17 давхар</p>
+                            <p style={{fontFamily:'MagistralRegular'}}>Хаяг:</p>
+                            <p style={{fontFamily:'MagistralRegular'}}>Цэнтрал товер 17 давхар</p>
                         </div>
                         <div className='flex space-x-5'>
-                            <p>Утас:</p>
-                            <p>+976 91951199</p>
+                            <p style={{fontFamily:'MagistralRegular'}}>Утас:</p>
+                            <p style={{fontFamily:'MagistralRegular'}}>+976 91951199</p>
                         </div>
                     </div>
                 </div>

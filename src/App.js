@@ -73,22 +73,22 @@ function App(){
         <div className="flex flex-col justify-center items-center py-10">
           <div className="w-6/12 flex justify-evenly space-x-5">
              <div className="flex flex-col">
-               <h1 className="text-xs font-bold">Нэр</h1>
+               <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Нэр</h1>
                <input className="w-44 py-4 outline-none border-b" placeholder="Нэр" />
              </div>
              <div className="flex flex-col">
-               <h1 className="text-xs font-bold">Цахим шуудан</h1>
+               <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Цахим шуудан</h1>
                <input className=" w-44 py-4 outline-none border-b" placeholder="Цахим шуудан" />
              </div>
              <div className="flex flex-col">
-               <h1 className="text-xs font-bold">Утас</h1>
+               <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Утас</h1>
                <input className=" w-44 py-4 outline-none border-b" placeholder="Утас" />
              </div>
           </div>
           <div className="w-6/12 py-5">
             <div className="flex justify-evenly lg:space-x-14 xl:space-x-12 sm:space-x-20">
               <div className="flex flex-col">
-                <h1 className="text-xs font-bold">Дэлгэрэнгүй</h1>
+                <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Дэлгэрэнгүй</h1>
                 <textarea id="message" className="h-14 lg:w-96 sm:w-80 py-4 outline-none border-b" placeholder="Бичих..."></textarea>
               </div>
               
@@ -103,25 +103,25 @@ function App(){
       {/* mobile */}
       <div className="container mx-auto py-20 block sm:hidden">
         <div className="">
-          <h1 className=" text-4xl text-center">Холбоо барих</h1>
+          <h1 className=" text-4xl text-center" style={{fontFamily:'MagistralRegular'}}>Холбоо барих</h1>
         </div>
         <div className="flex flex-col justify-start items-start mx-12 py-10">
           <div className="w-6/12 flex flex-col justify-start">
              <div className="flex flex-col pb-3">
-               <h1 className=" text-xs font-bold">Нэр</h1>
+               <h1 className=" text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Нэр</h1>
                <input className=" w-72 pt-2 outline-none border-b" placeholder="Нэр" />
              </div>
              <div className="flex flex-col pb-3">
-               <h1 className="text-xs font-bold">Цахим шуудан</h1>
+               <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Цахим шуудан</h1>
                <input className=" w-72 pt-2 outline-none border-b" placeholder="Цахим шуудан" />
              </div>
              <div className="flex flex-col pb-3">
-               <h1 className="text-xs font-bold">Утас</h1>
+               <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Утас</h1>
                <input className=" w-72 pt-2 outline-none border-b" placeholder="Утас" />
              </div>
              <div className="flex flex-col justify-evenly space-x-6">
               <div className="flex flex-col">
-                <h1 className="text-xs font-bold">Дэлгэрэнгүй</h1>
+                <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Дэлгэрэнгүй</h1>
                 <textarea id="message" rows="4" className="w-72 pt-2 outline-none border-b" placeholder="Бичих..."></textarea>
               </div>
             </div>
