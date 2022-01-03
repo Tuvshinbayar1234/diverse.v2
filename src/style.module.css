@@ -1,0 +1,31 @@
+.team{
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: -webkit-linear-gradient(45deg, #29BEFF, #1C76FE);
+    background: -moz-linear-gradient(45deg, #29BEFF, #1C76FE);
+    background: -o-linear-gradient(45deg, #29BEFF, #1C76FE);
+    background: linear-gradient(45deg, #29BEFF, #1C76FE);
+    -webkit-box-shadow: 0 0 12px 0 #29BEFF;
+    box-shadow: 0 0 12px 0 #29BEFF;
+    position: relative;
+    z-index: 1;
+}
+
+.team::before{
+    content: '';
+    position: absolute;
+    height: 170px;
+    top: -28px;
+    left: 50%;
+    z-index: -1;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-right: 3px solid #29BEFF;
+    border-image-source: linear-gradient(to top, #29BEFF, #1C76FE);
+    border-image-slice: 0.5;
+    
+}

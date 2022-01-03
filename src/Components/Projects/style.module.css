@@ -1,0 +1,34 @@
+.flip {
+  width: 150px;
+  height: 150px; 
+  text-align: center;
+  perspective: 600px;
+  float: left;  
+  margin: 30px;
+}
+.flipcontent {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+  border-radius: 30%;
+}
+.flip:hover .flipcontent {
+  transform: rotateY(180deg);
+  transition: transform 0.3s;
+}
+.flipfront, .flipback {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 150px;
+  backface-visibility: hidden;
+  
+  color: #fff;  
+  border: 2px solid black;
+  border-radius: 10%;
+}
+.flipback {
+  transform: rotateY(180deg);
+  border: 2px solid black;
+}
