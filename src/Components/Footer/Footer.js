@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='w-full py-5 px-0 sm:px-10' style={{backgroundColor: '#1E1E1E'}}>
             <div className='hidden sm:block'>
-                <div className='container mx-auto flex space-x-24 items-center'>
+                <div className='container mx-auto flex px-5 space-x-24 items-center'>
                     <div className=''>
                         <img alt='IMAGE' src={logo} />
                     </div>

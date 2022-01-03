@@ -169,7 +169,7 @@ const Projects = () => {
 
     return (
         <div className='w-full py-20 hidden xl:block'>
-            <div className='container mx-auto px-10'>
+            <div className='container mx-auto px-5'>
                 <div className=''>
                     <h1 id='Project' className='text-4xl font-bold'>Төслүүд</h1>
                 </div>

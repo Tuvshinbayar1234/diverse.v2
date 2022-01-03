@@ -29,7 +29,7 @@ export default function Hamburger() {
                         }`}>
                         <div className={'flex items-center justify-between pt-6 mr-5'}>
                             <div className="">
-                                <img alt='IMAGE' className='' src={Logo.src} />
+                                <img className='' src={Logo.src} />
                             </div>
                             <button onClick={handleToggle} className="navbar-close">
                                 <FaTimes className="h-7 w-7 text-black text-brand-black" />
