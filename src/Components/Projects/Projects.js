@@ -204,10 +204,12 @@ const Projects = () => {
                                                 <a href={selectedProject[0].link} rel="noreferrer" target="_blank">{selectedProject[0].name}</a>
                                             </div>
                                             <div className='text-white w-4/5 flex flex-col pt-5 px-10'>
-                                                <div className='flex flex-col'>
-                                                    <h1 onClick={() => closedAlert()} className='text-3xl text-white cursor-pointer flex justify-end'><FaAngleLeft /></h1>
+                                                
+                                                    <div className='flex justify-end'>
+                                                        <h1 onClick={() => closedAlert()} className='text-3xl text-white cursor-pointer flex justify-end'><FaAngleLeft /></h1>
+                                                    </div>
                                                     <div className=''><h1 className='text-left text-2xl pb-2 px-2'>{selectedProject[0].name}</h1></div>
-                                                </div>
+                                                
                                                 <p className='text-sm text-justify px-2' style={{textIndent: '27px' , fontFamily:'MagistralRegular'}}>{selectedProject[0].description}</p>
                                             </div>
                                         </div>
@@ -218,13 +220,13 @@ const Projects = () => {
                                                         <div className='flex space-x-32 w-full pt-2'>
                                                             <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                                 <p className='text-xs'>• {selectedProject[0].development1}</p>
-                                                                <p className='text-xs'>• {selectedProject[0].development2}</p>
+                                                                <p className='text-xs py-2'>• {selectedProject[0].development2}</p>
                                                                 <p className='text-xs'>• {selectedProject[0].development3}</p>
                                                                 
                                                             </div>
                                                             <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                                 <p className='text-xs'>• {selectedProject[0].development4}</p>
-                                                                <p className='text-xs'>• {selectedProject[0].development5}</p>
+                                                                <p className='text-xs py-2'>• {selectedProject[0].development5}</p>
                                                                 <p className='text-xs'>• {selectedProject[0].development6}</p>
                                                             </div>
                                                         </div>
@@ -247,9 +249,9 @@ const Projects = () => {
                                     <div className='flex flex-col items-end'>
                                         <div className=' h-128 flex justify-end rounded-tr-lg rounded-tl-lg' style={{width: '70%', background: '#1E1E1E'}}>
                                             <div className='text-white px-2 w-full flex flex-col'>
-                                            <h1 onClick={() => closedBottomAlert()} className='text-3xl pr-3 text-right text-white cursor-pointer flex justify-end pt-2'><FaAngleLeft /></h1>
                                                 <div className='flex items-center w-full justify-between'>
                                                     <div className='text-white w-full flex flex-col pl-5'>
+                                                    <h1 onClick={() => closedBottomAlert()} className='text-3xl pr-8 text-right text-white cursor-pointer flex justify-end pt-5'><FaAngleLeft /></h1>
                                                     <div className='flex flex-col justify-center px-1 pt-5'>
                                                     <a className='text-2xl' href={selectedProduct[0].link} rel="noreferrer" target="_blank">{selectedProduct[0].name}</a>
                                                         <p className='text-white text-sm' style={{textIndent: '27px' , fontFamily: 'MagistralRegular'}}>{selectedProduct[0].description}</p>
@@ -269,12 +271,12 @@ const Projects = () => {
                                                 <div className='flex space-x-32 pl-8 pt-2 w-full'>
                                                     <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                         <p className='text-xs'>• {selectedProduct[0].development1}</p>
-                                                        <p className='text-xs'>• {selectedProduct[0].development2}</p>
+                                                        <p className='text-xs py-2'>• {selectedProduct[0].development2}</p>
                                                         <p className='text-xs'>• {selectedProduct[0].development3}</p>
                                                     </div>
                                                     <div className='flex flex-col justify-start items-start' style={{fontFamily:'MagistralRegular'}}>
                                                         <p className='text-xs'>• {selectedProduct[0].development4}</p>
-                                                        <p className='text-xs'>• {selectedProduct[0].development5}</p>
+                                                        <p className='text-xs py-2'>• {selectedProduct[0].development5}</p>
                                                         <p className='text-xs'>• {selectedProduct[0].development6}</p>
                                                     </div>
                                                 </div>
