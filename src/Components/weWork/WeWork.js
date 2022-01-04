@@ -42,11 +42,11 @@ const WeWork = () => {
                     <h1 className='text-2xl text-left font-bold' style={{fontFamily: 'Magistral'}}>Smart Contract</h1>
                     <p className=' w-full mx-1' style={{fontFamily:'MagistralRegular'}}>Ухаалаг гэрээг ERC-20, BEP-20, ERC-1557, SPL стандартын дагуу хөгжүүлж байна.</p>
                     </span>
-                    <span class="w-full h-28 flex-col flex rounded-2xl">
+                    <span class="w-full flex-col flex rounded-2xl">
                     <h1 className='text-2xl w-9/12 font-bold' style={{fontFamily: 'Magistral'}}>Blockchain architecture</h1>
                     <p className=' w-full' style={{fontFamily:'MagistralRegular'}}>Бид харилцагчдынхаа хэрэглээнд тохирсон Dapp-н блокчэйн архитехтурыг гаргаж, хамгийн дэвшилтэт шийдлийг хүргэх болно.</p>    
                     </span>
-                    <span class="w-full h-40 pt-40 flex-col flex justify-center rounded-2xl">
+                    <span class="w-full h-40 pt-20 flex-col flex justify-center rounded-2xl">
                     <h1 className='text-2xl text-left font-bold w-3/12' style={{fontFamily: 'Magistral'}}>Blockchain зөвлөгөө</h1>
                         <p className=' w-full mx-1' style={{fontFamily:'MagistralRegular'}}>Бид харилцагчдынхаа бизнесийн онцлог, хэрэгцээг харгалзан үзэж, блокчэйн шийдлийн гарааны болон цаашдын төлөвлөгөөнд зөвлөж байна.</p>
                         
