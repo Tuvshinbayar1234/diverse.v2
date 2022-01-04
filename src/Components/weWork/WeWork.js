@@ -2,9 +2,9 @@ import React from 'react'
 
 const WeWork = () => {
     return (
-        <div className='w-full pt-10 pb-20 sm:py-10 px-5'>
+        <div className='w-full pt-10 pb-20 sm:py-10'>
             <div className='container mx-auto hidden xl:block'>
-                <div className='flex justify-between w-full '>
+                <div className='flex justify-between px-5 w-full space-x-10'>
                     <span id='WeWork' class="relative w-128 h-72 flex-col inline-flex justify-center border-black rounded-2xl border-4">
                     <h1 className=' text-4xl w-3/12 mx-10 font-bold' style={{fontFamily: 'Magistral'}}>Smart Contract</h1>
                         <p className=' w-3/4 mx-10 py-5' style={{fontFamily:'MagistralRegular'}}>Ухаалаг гэрээг ERC-20, BEP-20, ERC-1557, SPL стандартын дагуу хөгжүүлж байна.</p>
