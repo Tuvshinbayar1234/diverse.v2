@@ -7,12 +7,12 @@ html {
 @tailwind components;
 @font-face {
     font-family: 'Magistral' ;
-    src: url('/src/assets/Magistral-Bold.ttf');
+    src: url('/src/assets/Play-Bold.ttf');
 }
 
 @font-face {
   font-family: 'MagistralRegular' ;
-  src: url('/src/assets/Magistral-Book.ttf');
+  src: url('/src/assets/Play-Regular.ttf');
 }
 
 @tailwind utilities;

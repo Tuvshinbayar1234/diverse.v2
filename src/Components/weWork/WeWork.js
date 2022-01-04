@@ -22,7 +22,7 @@ const WeWork = () => {
                         </span>
                     </span>
                     <span class="relative w-128 h-72 flex-col inline-flex justify-center border-black rounded-2xl border-4">
-                    <h1 className=' text-4xl w-3/12 mx-10 font-bold' style={{fontFamily: 'Magistral'}}>Blockchain зөвлөгөө</h1>
+                    <h1 className=' text-4xl w-3/12 mx-10 font-bold' style={{fontFamily: 'Magistral'}}>Blockchain advise</h1>
                         <p className=' w-3/4 mx-10 py-5' style={{fontFamily:'MagistralRegular'}}>Бид харилцагчдынхаа бизнесийн онцлог, хэрэгцээг харгалзан үзэж, блокчэйн шийдлийн гарааны болон цаашдын төлөвлөгөөнд зөвлөж байна.</p>
                         <span class="flex absolute h-10 w-10 top-0 right-0 mt-64 -mr-5">
                             <span class="absolute inline-flex h-full w-full bg-black opacity-75"></span>
