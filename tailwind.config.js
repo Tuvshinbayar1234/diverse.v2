@@ -3,7 +3,10 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      width: {'128': '26.875rem',},
+      width: {
+        '128': '26.875rem',
+        '132': '38.2rem'
+    },
       fontSize: {
         larger: ['200px' , {
         lineHeight: '20px'

@@ -86,7 +86,39 @@ function App(){
       <ProjectSlider />
       <TeamSlider />
       <ProjectAccordion />
-      <div className="container mx-auto py-20 hidden sm:block">
+      <div className="container mx-auto py-20 hidden xl:block">
+        <div className="">
+          <h1 className="text-5xl text-center" style={{fontFamily: 'Magistral'}}>Холбоо барих</h1>
+        </div>
+        <div className="w-full py-10">
+          <div className="flex w-full justify-center items-center">
+            <div className="flex items-center justify-center flex-wrap w-3/4 space-x-5">
+                <div className="flex flex-col">
+                  <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Нэр</h1>
+                  <input className=" w-72 py-4 outline-none border-b ml-3" placeholder="Нэр" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Цахим шуудан</h1>
+                  <input className="  w-72 py-4 outline-none border-b ml-3" placeholder="Цахим шуудан" />
+                </div>
+                <div className="flex flex-col">
+                  <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Утас</h1>
+                  <input className="  w-72 py-4 outline-none border-b" placeholder="Утас" />
+                </div>
+                <div className="flex justify-center space-x-9 w-full">
+                <div className="flex flex-col py-5">
+                  <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Дэлгэрэнгүй</h1>
+                  <textarea id="message" className="h-14 lg:w-132 sm:w-80 py-4 outline-none border-b ml-3" placeholder="Бичих..."></textarea>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                  <AlertSuccess {...SuccessData}  />
+                </div>
+                </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+      {/* <div className="container mx-auto py-20 hidden sm:block">
         <div className="">
           <h1 className="text-5xl text-center" style={{fontFamily: 'Magistral'}}>Холбоо барих</h1>
         </div>
@@ -106,10 +138,10 @@ function App(){
              </div>
           </div>
           <div className="w-6/12 py-5">
-            <div className="flex justify-evenly lg:space-x-14 xl:space-x-16 sm:space-x-20">
+            <div className="flex justify-evenly lg:space-x-14 xl:space-x-1 sm:space-x-20">
               <div className="flex flex-col">
                 <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Дэлгэрэнгүй</h1>
-                <textarea id="message" className="h-14 lg:w-96 sm:w-80 py-4 outline-none border-b ml-3" placeholder="Бичих..."></textarea>
+                <textarea id="message" className="h-14 lg:w-132 sm:w-80 py-4 outline-none border-b ml-3" placeholder="Бичих..."></textarea>
               </div>
               
               <div className="flex flex-col items-center justify-center">
@@ -119,14 +151,14 @@ function App(){
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* mobile */}
-      <div className="container mx-auto py-20 block sm:hidden">
+      <div className="container mx-auto py-20 block xl:hidden">
         <div className="">
           <h1 className=" text-4xl text-center" style={{fontFamily: 'Magistral'}}>Холбоо барих</h1>
         </div>
-        <div className="flex flex-col justify-start items-start mx-12 py-10">
-          <div className="w-6/12 flex flex-col justify-start">
+        <div className="flex flex-col justify-center items-center mx-12 py-10">
+          <div className="w-full flex flex-col justify-center items-center">
              <div className="flex flex-col pb-3">
                <h1 className=" text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Нэр</h1>
                <input className=" w-72 pt-2 outline-none border-b" placeholder="Нэр" />

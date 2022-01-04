@@ -6,7 +6,7 @@ import './underline.css'
 const Nav = () => {
 
     return (
-        <div className='w-full py-5 px-5'>
+        <div className='w-full pt-14 px-5'>
             <div className="xl:hidden flex justify-between">
                 <img alt='IMAGE' className='z-50' src={Logo} />
                 <Hamburger />
