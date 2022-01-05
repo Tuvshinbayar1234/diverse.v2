@@ -25,9 +25,10 @@ function App(){
 
   return (
     <div className="w-full overflow-x-hidden" style={{backgroundColor: '#f7f7f9'}}>
-      <Cursor />
+      
       <div className="" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
       <Nav />
+      <Cursor />
       <div className="container mx-auto py-32 px-5 hidden lg:block">
         <div className="flex justify-evenly" style={{fontFamily: 'Magistral'}}>
           <div className="w-full ">
