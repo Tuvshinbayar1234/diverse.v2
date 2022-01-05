@@ -26,7 +26,7 @@ function App(){
   return (
     <div className="w-full overflow-x-hidden" style={{backgroundColor: '#f7f7f9'}}>
       
-      <div className="" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+      
       <Nav />
       <Cursor />
       <div className="container mx-auto py-32 px-5 hidden lg:block">
@@ -83,15 +83,15 @@ function App(){
         </div>
       </div>
       <We />
-      </div>
+      
       <WeWork />
-      <div className="" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+      
       <Team />
       <Projects />
       <ProjectSlider />
       <TeamSlider />
       <ProjectAccordion />
-      </div>
+      
       <div className="container mx-auto py-20 hidden xl:block">
         <div className="">
           <h1 className="text-5xl text-center" style={{fontFamily: 'Magistral'}}>Холбоо барих</h1>
