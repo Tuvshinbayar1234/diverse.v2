@@ -12,6 +12,7 @@ import ProjectAccordion from "./Components/Projects/ProjectAccordion";
 import ProjectSlider from "./Components/Projects/ProjectSlider";
 import Style from './styles.module.css'
 import background from './assets/bg-1.png'
+import Cursor from "./Components/Cursor/Cursor";
 
 function App(){
 
@@ -24,6 +25,7 @@ function App(){
 
   return (
     <div className="w-full overflow-x-hidden" style={{backgroundColor: '#f7f7f9'}}>
+      <Cursor />
       <div className="" style={{ backgroundImage: `url(${background})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
       <Nav />
       <div className="container mx-auto py-32 px-5 hidden lg:block">
