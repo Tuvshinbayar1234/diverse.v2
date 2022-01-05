@@ -25,7 +25,7 @@
   .cursor-dot-outline {
 	width: 40px;
 	height: 40px;
-	background-color: #E1E5EA; 
+	background-color: rgb(169,169,169, 0.5); 
 	z-index: 100;
   }
   
