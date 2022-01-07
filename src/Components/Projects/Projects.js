@@ -190,8 +190,12 @@ const Projects = () => {
                             <div className='flex space-x-12 justify-between w-full'>
                                 {imageOfProducts.length > 0 && imageOfProducts.map(single => (
                                     <div onClick={() => showTopAlert(single.code)} className=' cursor-pointer w-60 h-52 flex justify-center items-center rounded-xl' style={{background: '#FFFFFF', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25)'}}>
-                                        <img width={'120px'} height={'120px'} src={single.img} alt={single.code} />
-                                        <FaAngleRight />
+                                        <div className='flex justify-center items-center w-full'>
+                                            <img width={'120px'} height={'120px'} src={single.img} alt={single.code} />
+                                        </div>
+                                        <div className='flex justify-end items-end'>
+                                            <FaAngleRight />
+                                        </div>
                                     </div>
                                 ))}
                             </div>
@@ -239,8 +243,12 @@ const Projects = () => {
                             <div className='flex space-x-12 justify-end w-full pt-5'>
                                 {imageProducts.length > 0 && imageProducts.map(single => (
                                     <div onClick={() => showBottomAlert(single.code)} className='cursor-pointer w-60 h-52 flex justify-center items-center rounded-xl' style={{background: '#FFFFFF', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25)'}}>
-                                        <img width={'120px'} height={'120px'} src={single.img} alt={single.code} />
-                                        <FaAngleRight />
+                                        <div className='flex justify-center items-center w-full'>
+                                            <img width={'120px'} height={'120px'} src={single.img} alt={single.code} />
+                                        </div>
+                                        <div className='flex justify-end items-end'>
+                                            <FaAngleRight />
+                                        </div>
                                     </div>    
                                 ))}
                             </div>
