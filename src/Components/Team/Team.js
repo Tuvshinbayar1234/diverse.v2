@@ -6,7 +6,6 @@ import anhaa from '../../assets/anhaa.png'
 import muugii from '../../assets/muugii.png'
 import odko from '../../assets/odko.png'
 import zaya from '../../assets/zaya.png'
-import tuku from '../../assets/tuku.png'
 import tulgaa from '../../assets/tulgaa.png'
 import buri from '../../assets/buri.png'
 import eegii from '../../assets/eegii.png'
@@ -39,10 +38,7 @@ const Team = () => {
             img: tulgaa,
             name: 'Б. Баттулга',
             title: 'FullStack Developer',
-        }
-    ]
-
-    const Team2 = [
+        },
         {
             img: Bataa,
             name: 'Г. Ууганбат',
@@ -64,11 +60,17 @@ const Team = () => {
             title: 'Developer',
         },
         {
-            img: tuku,
-            name: 'О. Түвшинбаяр',
-            title: 'Developer',
-        }
+            img: zaya,
+            name: 'Ж. Амарзаяа',
+            title: 'Secretary',
+        },
+        {
+            img: amaraa,
+            name: 'А. Амартүвшин',
+            title: 'Blockchain Consultant',
+        },
     ]
+
 
     return (
         <div className='w-full container mx-auto px-5'>
@@ -76,74 +78,25 @@ const Team = () => {
                 <h1 id="Team" className='text-4xl' style={{fontFamily: 'Magistral'}}>Манай хамт олон</h1>
             </div>
             <div className="hidden lg:block">
-                <div className="flex items-center justify-between space-x-4 py-5 pt-10">
-                    {Team.map((i , x) => {
-                        return(
-                        <div key={x} className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                            <div className="">
-                                <img alt='IMAGE' width={'140px'} height={'188px'} src={i.img} />
-                                <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>{i.name}</h1>
-                                <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>{i.title}</p>
+                <div className="flex flex-wrap py-5 pt-10">
+                    {Team.map((i , index) => {
+                        return (
+                            <div key={index} className='w-1/4  xl:w-1/6 flex justify-center py-5'>
+                                <div  className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{ backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                                    <div className="">
+                                        <img alt='IMAGE' width={'185px'} height={'200px'} src={i.img} />
+                                        <div className='px-7'>
+                                            <h1 className="pt-1 text-sm font-bold" style={{ fontFamily: 'MagistralRegular' }}>{i.name}</h1>
+                                            <p className="lg:text-xs sm:text-xs pb-1" style={{ fontFamily: 'MagistralRegular' }}>{i.title}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
                         )
                     })}
                 </div>
             </div>
-            <div className="hidden lg:block">
-                <div className="flex items-center justify-between space-x-4 py-5">
-                    {Team2.map((i , x) => {
-                        return(
-                        <div key={x} className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                            <div className="">
-                                <img alt='IMAGE' width={'140px'} height={'188px'} src={i.img} />
-                                <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>{i.name}</h1>
-                                <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>{i.title}</p>
-                            </div>
-                        </div>
-                        )
-                    })}
-                </div>
-            </div>
-            <div className="hidden lg:block">
-                <div className="flex items-center justify-between space-x-4 py-5">
-                    <div className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                        <div className="">
-                            <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
-                        </div>
-                    </div>
-                    <div className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                        <div className="">
-                            <img alt='IMAGE' width={'140px'} height={'188px'} src={amaraa} />
-                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>А. Амартүвшин</h1>
-                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Blockchain Consultant</p>
-                        </div>
-                    </div>
-                    <div className="flex opacity-0 justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                        <div className="">
-                            <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
-                        </div>
-                    </div>
-                    <div className="flex opacity-0 justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                        <div className="">
-                            <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
-                        </div>
-                    </div>
-                    <div className="flex opacity-0 justify-center items-center w-48 h-64 rounded-3xl " style={{backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                        <div className="">
-                            <img alt='IMAGE' width={'140px'} height={'188px'} src={zaya} />
-                            <h1 className="pt-1 text-sm font-bold" style={{fontFamily:'MagistralRegular'}}>Ж. Амарзаяа</h1>
-                            <p className="lg:text-xs sm:text-xs pb-1" style={{fontFamily:'MagistralRegular'}}>Secretary</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     )
 }

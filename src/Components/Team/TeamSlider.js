@@ -8,7 +8,6 @@ import anhaa from '../../assets/anhaa.png'
 import muugii from '../../assets/muugii.png'
 import odko from '../../assets/odko.png'
 import zaya from '../../assets/zaya.png'
-import tuku from '../../assets/tuku.png'
 import tulgaa from '../../assets/tulgaa.png'
 import buri from '../../assets/buri.png'
 import eegii from '../../assets/eegii.png'
@@ -74,11 +73,6 @@ const TeamSlider = () => {
             title: 'Developer',
         },
         {
-            img: tuku,
-            name: 'О. Түвшинбаяр',
-            title: 'Developer',
-        },
-        {
             img: zaya,
             name: 'Ж. Амарзаяа',
             title: 'Secretary',
@@ -138,11 +132,6 @@ const TeamSlider = () => {
         {
             img: muugii,
             name: 'О. Мөнхзориг',
-            title: 'Developer',
-        },
-        {
-            img: tuku,
-            name: 'О. Түвшинбаяр',
             title: 'Developer',
         },
         {
