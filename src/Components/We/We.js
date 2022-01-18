@@ -2,7 +2,7 @@ import React from 'react'
 
 const We = () => {
     return (
-        <div className='w-full py-20 hidden lg:block'>
+        <div className='w-full py-10 xl:py-20 hidden lg:block'>
             <div className='container mx-auto'>
                 <div className='flex'>
                     <div className='w-2/4 flex flex-col justify-center items-center'>

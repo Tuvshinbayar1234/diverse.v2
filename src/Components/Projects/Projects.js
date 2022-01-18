@@ -23,7 +23,7 @@ const Projects = () => {
     };
 
     const showBottomAlert = (asset) => {
-        let selected = products.filter(single => single.code == asset) || []
+        let selected = projects.filter(single => single.code == asset) || []
         setSelectedProduct(selected)
         setIsOpenBot(true);
     };
@@ -77,12 +77,8 @@ const Projects = () => {
             development6: 'Designs',
             img: Monnom
         },
-       
-    ]
-
-    const products = [
         {
-            id: 1,
+            id: 4,
             name: 'ARDMONEY',
             link: 'https://www.ardmoney.com/',
             code: 'ARDM',
@@ -96,45 +92,10 @@ const Projects = () => {
             development6: 'DAP smart contracts ',
             img: White
         },
-       
-        {
-            id: 2,
-            name: 'Coming Soon',
-            code: 'ARDX',
-            description: 'Coming Soon',
-            development: 'Coming Soon',
-            development1: 'Coming Soon',
-            development2: 'Coming Soon',
-            development3: 'Coming Soon',
-            development4: 'Coming Soon',
-            development5: 'Coming Soon',
-            development6: 'Coming Soon',
-            img: White
-        },
-        
-        {
-            id: 3,
-            name: 'Coming Soon',
-            code: 'MONT',
-            description: 'Coming Soon',
-            development: 'Coming Soon',
-            development1: 'Coming Soon',
-            development2: 'Coming Soon',
-            development3: 'Coming Soon',
-            development4: 'Coming Soon',
-            development5: 'Coming Soon',
-            development6: 'Coming Soon',
-            img: White
-        },
-   ]
-   
+    ]
+
 
     const imageOfProducts = [
-        {
-            id: 120,
-            code: "ARDM",
-            img: Mont
-        },
         {
             id: 122,
             code: "ARDX",
@@ -145,25 +106,15 @@ const Projects = () => {
             code: "MONT",
             img: Monnom
         },
-        
-      
-    ]
-
-    const imageProducts = [
+        {
+            id: 120,
+            code: "ARDM",
+            img: Mont
+        },
         {
             id: 121,
             code: "ARDM",
             img: ARDMs
-        },
-        {
-            id: 120,
-            code: "ARDX",
-            img: Project1
-        },
-        {
-            id: 122,
-            code: "MONT",
-            img: Project1
         },
     ]
 
@@ -186,10 +137,10 @@ const Projects = () => {
                                 {/* <p className='px-2 py-2'>Манай компани нь 2020 онд Монгол Улсад мэдээллийн технологийн чиглэлээр үйл ажиллагаа эрхлэхээр үүсгэн байгуулагдсан бөгөөд бид одоогоор 4 бүтээгдэхүүнийг амжилттай хөгжүүлээд хэрэглээнд нэвтрүүлсэн байна.</p> */}
                             </div>
                         </div>
-                        <div className='flex flex-col relative justify-center w-2/4'>
-                            <div className='flex space-x-12 justify-between w-full'>
-                                {imageOfProducts.length > 0 && imageOfProducts.map(single => (
-                                    <div onClick={() => showTopAlert(single.code)} className=' cursor-pointer w-60 h-52 flex justify-center items-center rounded-xl' style={{background: '#FFFFFF', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25)'}}>
+                        <div className='flex  relative justify-center w-2/4'>
+                            <div className='flex flex-wrap justify-center items-center w-full'>
+                                {imageOfProducts.map(single => (
+                                    <div onClick={() => showTopAlert(single.code)} className=' m-5 cursor-pointer w-60 h-52 flex justify-center items-center rounded-xl' style={{background: '#FFFFFF', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25)'}}>
                                         <div className='flex justify-center items-center w-full'>
                                             <img width={'120px'} height={'120px'} src={single.img} alt={single.code} />
                                         </div>
@@ -199,7 +150,7 @@ const Projects = () => {
                                     </div>
                                 ))}
                             </div>
-                            {showTopAlert && selectedProject != null && (
+                            {selectedProject != null && (
                                 <div className={`z-50 overflow-y-hidden absolute top-0 2xl:top-0 flex flex-col w-full  ${isOpen ? ' absolute left-0 transition-all opacity-100 duration-200 ease-in ' : ' absolute left-full opacity-0 transition-all duration-200 ease-in '}`}>
                                     <div className='flex flex-col items-end'>
                                         <div className=' h-128 flex rounded-tl-lg rounded-bl-lg rounded-tr-lg w-full' style={{background: '#1E1E1E' ,boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25)'}}>
@@ -240,7 +191,7 @@ const Projects = () => {
                                         </div>
                                     </div>
                                 )}
-                            <div className='flex space-x-12 justify-end w-full pt-5'>
+                            {/* <div className='flex space-x-12 justify-end w-full pt-5'>
                                 {imageProducts.length > 0 && imageProducts.map(single => (
                                     <div onClick={() => showBottomAlert(single.code)} className='cursor-pointer w-60 h-52 flex justify-center items-center rounded-xl' style={{background: '#FFFFFF', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.5), inset 2px 2px 2px rgba(255, 255, 255, 0.25)'}}>
                                         <div className='flex justify-center items-center w-full'>
@@ -251,8 +202,8 @@ const Projects = () => {
                                         </div>
                                     </div>    
                                 ))}
-                            </div>
-                            {showBottomAlert && selectedProduct != null && (
+                            </div> */}
+                            {selectedProduct != null && (
                                 <div className={`z-50 overflow-y-hidden absolute top-0 2xl:top-0 flex flex-col w-full  ${isOpenBot ? ' absolute left-0 transition-all opacity-100 duration-200 ease-in ' : ' absolute left-full opacity-0 transition-all duration-200 ease-in '}`}>
                                     <div className='flex flex-col items-end'>
                                         <div className=' h-128 flex justify-end rounded-tr-lg rounded-tl-lg' style={{width: '70%', background: '#1E1E1E'}}>
