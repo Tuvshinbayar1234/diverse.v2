@@ -8,7 +8,9 @@ import DAXL from '../../assets/dax-logo-light.png'
 import DAXLs from '../../assets/dax-logo.png'
 import {FaAngleRight , FaAngleLeft, FaWindowClose} from 'react-icons/fa'
 
-const Projects = () => {
+
+
+const ProjectsDraft = () => {
 
     const [isOpen , setIsOpen] = useState(false)
     const [isOpenBot , setIsOpenBot] = useState(false)
@@ -117,6 +119,8 @@ const Projects = () => {
             img: ARDMs
         },
     ]
+
+
 
     return (
         <div className='w-full py-20 hidden xl:block'>
@@ -252,5 +256,63 @@ const Projects = () => {
     )
 }
 
-export default Projects
 
+const projectImages = [
+    {
+        code: "ARDX",
+        component: <img className='w-40 h-40' src={DAXLs} alt="dax" />
+    },
+    {
+        code: "MONT",
+        component: <img className='w-40 h-40' src={Monnom} alt="dax" />
+    },
+    {
+        code: "ARDM",
+        component: <img className='w-40 h-40' src={Mont} alt="dax" />
+    },
+    {
+        code: "MONT",
+        component: <img className='w-40 h-40' src={Monnom} alt="dax" />
+    },
+    {
+        code: "ARDM",
+        component: <img className='w-40 h-40' src={Mont} alt="dax" />
+    },
+    {
+        code: "ARDM",
+        component: <img className='w-40 h-40' src={ARDMs} alt="dax" />
+    },
+]
+
+function Projects () {
+    return (
+        <div className='container mx-auto py-40'>
+            <div className='flex items-center'>
+                <div  style={{fontFamily:'MagistralRegular'}} className='flex pr-24 flex-col w-1/2'>
+                    <h2 className='text-4xl font-bold mb-10' style={{fontFamily: 'Magistral'}}>Төслүүд</h2>
+                    <div>
+                        <h3 className='font-bold text-2xl'>Хөгжүүлэлт</h3>
+                        <p className='mt-2'>Бид хэрэглэгчдийнхээ онцлогийг шинжлэн, хэрэгцээнд зориулсан дизайн, брэндинг, вэбсайт, вэб болон утасны апп, блокчэйн дээр суурилсан токен, dapp-н ухаалаг гэрээг хөгжүүлж байна. Бид Монголын анхны төгрөгтэй 1:1 үнэ цэнтэй стэйблкойн болон Монголын анхны төвлөрсөн бус санхүүгийн систем болох ArdMoney төслийг гардан хэрэгжүүлж байгаа болно.</p>
+                    </div>
+                    <div className='mt-8'>
+                        <h3 className='font-bold text-2xl' >Зөвлөх</h3>
+                        <p className='mt-2'>Блокчэйн болон бусад дэвшилтэт технологийн шийдлийг таны бизнест тохируулан боловсруулж, зөвлөж өгөх болно. Манай харилцагчид мөн бидний улирал бүр гаргах технологийн тайлангуудыг хамгийн түрүүнд хүлээн авдаг.</p>
+                    </div>
+                </div>
+                <div className='w-1/2 flex flex-wrap'>
+                    {
+                        projectImages.map((img, index) => (
+                            <div key={index} className='w-1/3   flex justify-center'>
+                                <div className='w-full h-52 flex  transition transform hover:scale-110 hover:shadow-none cursor-pointer justify-center items-center  shadow-md'>
+                                    {img.component}
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Projects

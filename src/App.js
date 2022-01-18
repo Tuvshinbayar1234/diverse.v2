@@ -28,11 +28,11 @@ function App(){
     <div className="w-full overflow-x-hidden" style={{backgroundColor: 'white'}}>
       
       
-      <Nav />
+      {/* <Nav /> */}
       {/* <Cursor /> */}
-      <div className="container mx-auto py-32 px-5 hidden lg:block">
+      <div className="container mx-auto min-h-screen  px-5 hidden lg:flex items-center">
         <div className="flex justify-evenly" style={{fontFamily: 'Magistral'}}>
-          <div className="w-full ">
+          <div className="w-full flex flex-col justify-center ">
             <div className="">
               <h1 className="text-8xl leading-snug w-full">Simple Solutions For</h1>
             </div>
@@ -68,9 +68,7 @@ function App(){
         </div>
       </div>
       <We />
-      
       <WeWork />
-      
       <Team />
       <Projects />
       <ProjectSlider />

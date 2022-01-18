@@ -40,11 +40,6 @@ const Team = () => {
             title: 'FullStack Developer',
         },
         {
-            img: Bataa,
-            name: 'Г. Ууганбат',
-            title: 'Senior Developer',
-        },
-        {
             img: buri,
             name: 'Б. Бүри',
             title: 'DevOps',
@@ -69,22 +64,28 @@ const Team = () => {
             name: 'А. Амартүвшин',
             title: 'Blockchain Consultant',
         },
+        {
+            img: Bataa,
+            name: 'Г. Ууганбат',
+            title: 'Developer',
+        },
     ]
 
 
     return (
         <div className='w-full container mx-auto px-5'>
             <div className='hidden lg:block'>
-                <h1 id="Team" className='text-4xl' style={{fontFamily: 'Magistral'}}>Манай хамт олон</h1>
+                <h1 id="Team" className='text-5xl text-center' style={{fontFamily: 'Magistral'}}>Манай хамт олон</h1>
             </div>
             <div className="hidden lg:block">
                 <div className="flex flex-wrap py-5 pt-10">
                     {Team.map((i , index) => {
                         return (
-                            <div key={index} className='w-1/4  xl:w-1/6 flex justify-center py-5'>
-                                <div  className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{ backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}>
+                            <div key={index} className='w-1/4  flex justify-center py-5'>
+                                {/* <div  className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{ backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}> */}
+                                <div  className="flex justify-center items-center w-52 h-64 " >
                                     <div className="">
-                                        <img alt='IMAGE' width={'185px'} height={'200px'} src={i.img} />
+                                        <img alt='IMAGE' width={'200px'} height={'220px'} src={i.img} />
                                         <div className='px-7'>
                                             <h1 className="pt-1 text-sm font-bold" style={{ fontFamily: 'MagistralRegular' }}>{i.name}</h1>
                                             <p className="lg:text-xs sm:text-xs pb-1" style={{ fontFamily: 'MagistralRegular' }}>{i.title}</p>
