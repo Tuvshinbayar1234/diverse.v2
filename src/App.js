@@ -30,7 +30,10 @@ function App(){
       
       {/* <Nav /> */}
       {/* <Cursor /> */}
-      <div className="container mx-auto min-h-screen  px-5 hidden lg:flex items-center">
+      <div className="container mx-auto min-h-screen relative  px-5 hidden lg:flex items-center">
+        {/* <div className='absolute left-1/2 transform -translate-x-1/2 top-14 rounded-full border-4 border-black w-20 h-20 '>
+          <div className='w-1 h-28 bg-black absolute left-6 '></div>
+        </div> */}
         <div className="flex justify-evenly" style={{fontFamily: 'Magistral'}}>
           <div className="w-full flex flex-col justify-center ">
             <div className="">
