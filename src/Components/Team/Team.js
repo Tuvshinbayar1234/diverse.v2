@@ -78,17 +78,17 @@ const Team = () => {
                 <h1 id="Team" className='text-5xl text-center' style={{fontFamily: 'Magistral'}}>Манай хамт олон</h1>
             </div>
             <div className="hidden lg:block">
-                <div className="flex flex-wrap py-5 pt-10">
+                <div className="flex flex-wrap justify-center py-5 pt-10">
                     {Team.map((i , index) => {
                         return (
                             <div key={index} className='w-1/4  flex justify-center py-5'>
                                 {/* <div  className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{ backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}> */}
                                 <div  className="flex justify-center items-center w-52 h-64 " >
                                     <div className="">
-                                        <img alt='IMAGE' width={'200px'} height={'220px'} src={i.img} />
-                                        <div className='px-7'>
-                                            <h1 className="pt-1 text-sm font-bold" style={{ fontFamily: 'MagistralRegular' }}>{i.name}</h1>
-                                            <p className="lg:text-xs sm:text-xs pb-1" style={{ fontFamily: 'MagistralRegular' }}>{i.title}</p>
+                                        <img alt='IMAGE'  src={i.img} />
+                                        <div className='pl-7 text-lg'>
+                                            <p className="pt-1  font-bold" style={{ fontFamily: 'MagistralRegular' }}>{i.name}</p>
+                                            <p className="text-sm " style={{ fontFamily: 'MagistralRegular' }}>{i.title}</p>
                                         </div>
                                     </div>
                                 </div>
