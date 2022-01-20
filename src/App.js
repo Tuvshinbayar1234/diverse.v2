@@ -26,49 +26,57 @@ function App(){
   };
 
   return (
-    <div className="w-full overflow-x-hidden" style={{backgroundColor: 'white'}}>
-      
-      
+    <div className="w-full overflow-x-hidden" style={{ backgroundColor: 'white' }}>
+
+
       {/* <Nav /> */}
       {/* <Cursor /> */}
       <div className="container mx-auto min-h-screen relative  px-5 hidden lg:flex items-center">
         {/* <div className='absolute left-1/2 transform -translate-x-1/2 top-14 rounded-full border-4 border-black w-20 h-20 '>
           <div className='w-1 h-28 bg-black absolute left-6 '></div>
         </div> */}
-        <div className="flex justify-evenly" style={{fontFamily: 'Magistral'}}>
-          <div className="w-full flex flex-col justify-center ">
+        <div className="flex w-full justify-evenly" style={{ fontFamily: 'Magistral' }}>
+          <div className='w-1/2 text-8xl'>
+            <h1 className='flex flex-col leading-snug justify-center h-full'>
+              <span>Simple</span>
+              <span>Solutions For</span>
+              <span className='pl-52'>Complex</span>
+              <span>Connection</span>
+            </h1>
+          </div>
+          {/* <div className="w-full flex leading-snug flex-col justify-center ">
             <div className="">
-              <h1 className="text-8xl leading-snug w-full">Simple Solutions For</h1>
+              <h1 className="text-8xl  w-full">Simple Solutions For</h1>
             </div>
             <div className="flex flex-col justify-end w-4/5">
               <h1 className="text-8xl text-right">Complex</h1>
-              <h1 className="text-8xl">Cases</h1>
+              <h1 className="text-8xl">Connection</h1>
             </div>
-          </div>
-          <div className="w-full flex justify-end">
-          {/* ref={chainSvg} */}
-          <ChainSvg /> 
+          </div> */}
+          <div className="w-1/2 flex justify-end">
+            {/* ref={chainSvg} */}
+            <ChainSvg />
           </div>
         </div>
       </div>
       {/* Mobile */}
       <div className="flex justify-center items-center">
-      <div className="container block lg:hidden px-5">
-        
-        <div className="flex justify-evenly">
-          <div className="w-6/12 sm:pt-24" style={{fontFamily: 'Magistral'}}>
-            <div className="">
-              <h1 className="text-2xl sm:text-4xl leading-snug w-full sm:w-9/12">Simple Solutions For</h1>
+        <div className="container block lg:hidden px-5">
+
+          <div className="flex justify-evenly">
+            <div className="w-6/12 sm:pt-24" style={{ fontFamily: 'Magistral' }}>
+              <div className="">
+                <h1 className="text-2xl sm:text-4xl leading-snug w-full sm:w-9/12">Simple Solutions For</h1>
+              </div>
+              <div className="flex flex-col justify-end w-full sm:w-9/12">
+                <h1 className="text-2xl sm:text-4xl text-right">Complex</h1>
+                <h1 className="text-2xl sm:text-4xl">Conundrum</h1>
+              </div>
             </div>
-            <div className="flex flex-col justify-end w-full sm:w-9/12">
-              <h1 className="text-2xl sm:text-4xl text-right">Complex</h1>
-              <h1 className="text-2xl sm:text-4xl">Conundrum</h1>
+            <div className="  w-6/12 flex justify-center items-center">
+              <img className="" src={Home} alt="Home" />
             </div>
           </div>
-          <div className="  w-6/12 flex justify-center items-center">
-            <img className="" src={Home} alt="Home" />
-          </div>
-        </div>
         </div>
       </div>
       <We />
@@ -79,50 +87,50 @@ function App(){
       <TeamSlider />
       <ProjectAccordion />
 
-      <ContactUs SuccessData={SuccessData}/>
-      
-      
+      <ContactUs SuccessData={SuccessData} />
+
+
       {/* mobile */}
       <div className="container mx-auto py-20 block xl:hidden">
         <div className="">
-          <h1 className=" text-4xl text-center" style={{fontFamily: 'Magistral'}}>Холбоо барих</h1>
+          <h1 className=" text-4xl text-center" style={{ fontFamily: 'Magistral' }}>Холбоо барих</h1>
         </div>
         <div className="flex flex-col justify-center items-center mx-12 py-10">
           <div className="w-full flex flex-col justify-center items-center">
-             <div className="flex flex-col pb-3">
-               <h1 className=" text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Нэр</h1>
-               <input className=" w-72 pt-2 outline-none border-b" placeholder="Нэр" style={{backgroundColor: '#f7f7f9'}} />
-             </div>
-             <div className="flex flex-col pb-3">
-               <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Цахим шуудан</h1>
-               <input className=" w-72 pt-2 outline-none border-b" placeholder="Цахим шуудан" style={{backgroundColor: '#f7f7f9'}} />
-             </div>
-             <div className="flex flex-col pb-3">
-               <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Утас</h1>
-               <input className=" w-72 pt-2 outline-none border-b" placeholder="Утас" style={{backgroundColor: '#f7f7f9'}} />
-             </div>
-             <div className="flex flex-col justify-evenly space-x-6">
+            <div className="flex flex-col pb-3">
+              <h1 className=" text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Нэр</h1>
+              <input className=" w-72 pt-2 outline-none border-b" placeholder="Нэр" style={{ backgroundColor: '#f7f7f9' }} />
+            </div>
+            <div className="flex flex-col pb-3">
+              <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Цахим шуудан</h1>
+              <input className=" w-72 pt-2 outline-none border-b" placeholder="Цахим шуудан" style={{ backgroundColor: '#f7f7f9' }} />
+            </div>
+            <div className="flex flex-col pb-3">
+              <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Утас</h1>
+              <input className=" w-72 pt-2 outline-none border-b" placeholder="Утас" style={{ backgroundColor: '#f7f7f9' }} />
+            </div>
+            <div className="flex flex-col justify-evenly space-x-6">
               <div className="flex flex-col">
-                <h1 className="text-xs font-bold" style={{fontFamily:'MagistralRegular'}}>Дэлгэрэнгүй</h1>
-                <textarea id="message" rows="4" className="w-72 pt-2 outline-none border-b" style={{backgroundColor: '#f7f7f9'}} placeholder="Бичих..."></textarea>
+                <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Дэлгэрэнгүй</h1>
+                <textarea id="message" rows="4" className="w-72 pt-2 outline-none border-b" style={{ backgroundColor: '#f7f7f9' }} placeholder="Бичих..."></textarea>
               </div>
             </div>
           </div>
         </div>
         <div className="">
           <div className="flex flex-col items-center justify-center py-5">
-            <AlertSuccess {...SuccessData}  />
+            <AlertSuccess {...SuccessData} />
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
-  
+
 }
 
-function ContactUs({SuccessData}) {
+function ContactUs({ SuccessData }) {
   let [email, setEmail] = useState('');
   let [name, setName] = useState('');
   let [phoneNumber, setPhoneNumber] = useState('');
@@ -159,7 +167,7 @@ function ContactUs({SuccessData}) {
       setPhoneNumber(value);
     }
   }
-  
+
 
   return (
     <div className="container mx-auto py-20 hidden xl:block">
