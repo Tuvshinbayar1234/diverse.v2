@@ -21,9 +21,9 @@ export default function Projects() {
     }
 
     return (
-        <div className='container mx-auto py-40'>
-            <div className='flex items-center'>
-                <div style={{ fontFamily: 'MagistralRegular' }} className='flex pr-24 flex-col w-1/2'>
+        <div className='container mx-auto pb-40 lg:py-40'>
+            <div className='flex flex-col lg:flex-row items-center'>
+                <div style={{ fontFamily: 'MagistralRegular' }} className='flex pr-24 flex-col w-full lg:w-1/2'>
                     <h2 className='text-5xl font-bold mb-10' style={{ fontFamily: 'Magistral' }}>Төслүүд</h2>
                     <div>
                         <h3 className='font-bold text-2xl'>Хөгжүүлэлт</h3>
@@ -34,11 +34,11 @@ export default function Projects() {
                         <p className='mt-2'>Блокчэйн болон бусад дэвшилтэт технологийн шийдлийг таны бизнест тохируулан боловсруулж, зөвлөж өгөх болно. Манай харилцагчид мөн бидний улирал бүр гаргах технологийн тайлангуудыг хамгийн түрүүнд хүлээн авдаг.</p>
                     </div>
                 </div>
-                <div className='w-1/2  relative '>
+                <div className='w-full mt-14 lg:w-1/2  relative '>
                     <div className='w-full flex flex-wrap'>
                         {
                             projectImages.map((img, index) => (
-                                <div key={index} className='w-1/3 flex justify-center'>
+                                <div key={index} className='w-1/2 flex justify-center'>
                                     <div onClick={() => showProjectDetail(index)}
                                         className={` ${selectedProject === index ? 'rounded-xl scale-110 border border-black z-30' : 'hover:scale-110 hover:shadow-none shadow-md'} bg-white w-full  h-52 flex  transition transform  cursor-pointer justify-center items-center  `}>
                                         {img.component}
@@ -50,10 +50,10 @@ export default function Projects() {
                     <div className={`absolute transition flex  text-white top-0 ${selectedProject == -1 ? '-z-10 opacity-0' : 'z-20 opacity-100'}  w-full h-full bg-black rounded-xl`}>
                         {
                             selectedProject !== -1 ? (
-                                <div className={`w-full flex  ${selectedProject >= 3 ? 'flex-col-reverse' : 'flex-col'}`}>
+                                <div className={`w-full flex  ${selectedProject >= 2 ? 'flex-col-reverse' : 'flex-col'}`}>
                                     <div className='flex'>
-                                        {(selectedProject === 0 || selectedProject === 3) && <BlankSpace />}
-                                        <div className='w-1/3 pt-10 pl-14'>
+                                        {(selectedProject === 0 || selectedProject === 2) && <BlankSpace />}
+                                        <div className='w-1/2 pt-10 pl-24'>
                                             <ul className='list-disc'>
                                             {
                                                 projects[selectedProject].listsLeft.map(list => (
@@ -62,17 +62,7 @@ export default function Projects() {
                                             }
                                             </ul>
                                         </div>
-                                        {(selectedProject === 1 || selectedProject === 4) && <BlankSpace />}
-                                        <div className='w-1/3 pt-10 pl-14'>
-                                            <ul className='list-disc'>
-                                            {
-                                                projects[selectedProject].listsRight.map(list => (
-                                                    <li>{list}</li>
-                                                ))
-                                            }
-                                            </ul>
-                                        </div>
-                                        {(selectedProject === 2 || selectedProject === 5) && <BlankSpace />}
+                                        {(selectedProject === 1 || selectedProject === 3) && <BlankSpace />}
                                     </div>
                                     <div className={`px-10 h-1/2  flex flex-col justify-center`}>
                                         <h3>{projects[selectedProject].name}</h3>
@@ -90,19 +80,13 @@ export default function Projects() {
 
 function BlankSpace() {
     return (
-        <div className='w-1/3 h-52  transform scale-110'></div>
+        <div className='w-1/2 h-52  transform scale-110'></div>
     )
 }
 
 const projectImages = [
     {
         component: <img className='w-40 h-40' src={DAXLs} alt="dax" />
-    },
-    {
-        component: <img className='w-40 h-40' src={Monnom} alt="dax" />
-    },
-    {
-        component: <img className='w-40 h-40' src={Mont} alt="dax" />
     },
     {
         component: <img className='w-40 h-40' src={Monnom} alt="dax" />
@@ -121,42 +105,6 @@ const projects = [
         name: 'DAX',
         link: 'https://dax.mn/',
         description: 'Монголын том 4 биржийн нэг. Хамгийн анх Ард Санхүүгийн Нэгдэлийн крипто арилжааны биржийг',
-        listsLeft: [
-            'Development',
-            'Code',
-            'FrontEnd',
-            'BackEnd',
-            'Designs',
-        ],
-        listsRight: [
-            'Code',
-            'BackEnd',
-            'Designs',
-            'Designs',
-        ],
-    },
-    {
-        name: 'MONNOM',
-        link: 'https://monnom.mn/',
-        description: '“Monnom” аппликейшн нь цахим, аудио, хэвлэмэл номыг онлайнаар худалдаалдаг номын төвлөрсөн платформ юм. Бид 2021 оноос үйл ажиллагаагаа явуулж эхэлсэн ба Монгол хэл дээрх бүх төрлийн номыг цахим, аудио, хэвлэмэл гэсэн гурван хэлбэрээр хэрэглэгчдэд хүргэдэг.',
-        listsLeft: [
-            'Development',
-            'Code',
-            'FrontEnd',
-            'BackEnd',
-            'Designs',
-        ],
-        listsRight: [
-            'Code',
-            'BackEnd',
-            'Designs',
-            'Designs',
-        ],
-    },
-    {
-        name: 'MONT',
-        link: 'https://stablecoin.mn/',
-        description: 'Монголын анхны Стэйблкойн. Монгол төгрөгтэй үнэ цэнээ аргамжсан энэхүү койн нь крипто арилжаанд төгрөгийг төлөөлөх хамгийн зөв хэрэгсэл болно. Энэхүү койны ухаалаг гэрээг Diverse Solutions хөгжүүлж, хэрэглээнд нэвтрүүлсэн болно.',
         listsLeft: [
             'Development',
             'Code',

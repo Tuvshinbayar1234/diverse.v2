@@ -31,51 +31,18 @@ function App(){
 
       {/* <Nav /> */}
       {/* <Cursor /> */}
-      <div className="container mx-auto min-h-screen relative  px-5 hidden lg:flex items-center">
-        {/* <div className='absolute left-1/2 transform -translate-x-1/2 top-14 rounded-full border-4 border-black w-20 h-20 '>
-          <div className='w-1 h-28 bg-black absolute left-6 '></div>
-        </div> */}
+      <div className="container mx-auto min-h-screen relative  px-5 flex items-center">
         <div className="flex w-full justify-evenly" style={{ fontFamily: 'Magistral' }}>
-          <div className='w-1/2 text-8xl'>
+          <div className='w-1/2 text-5xl lg:text-7xl xl:text-8xl'>
             <h1 className='flex flex-col leading-snug justify-center h-full'>
               <span>Simple</span>
               <span>Solutions For</span>
-              <span className='pl-52'>Complex</span>
+              <span className='pl-28 lg:pl-40 xl:pl-52'>Complex</span>
               <span>Connection</span>
             </h1>
           </div>
-          {/* <div className="w-full flex leading-snug flex-col justify-center ">
-            <div className="">
-              <h1 className="text-8xl  w-full">Simple Solutions For</h1>
-            </div>
-            <div className="flex flex-col justify-end w-4/5">
-              <h1 className="text-8xl text-right">Complex</h1>
-              <h1 className="text-8xl">Connection</h1>
-            </div>
-          </div> */}
           <div className="w-1/2 flex justify-end">
-            {/* ref={chainSvg} */}
             <ChainSvg />
-          </div>
-        </div>
-      </div>
-      {/* Mobile */}
-      <div className="flex justify-center items-center">
-        <div className="container block lg:hidden px-5">
-
-          <div className="flex justify-evenly">
-            <div className="w-6/12 sm:pt-24" style={{ fontFamily: 'Magistral' }}>
-              <div className="">
-                <h1 className="text-2xl sm:text-4xl leading-snug w-full sm:w-9/12">Simple Solutions For</h1>
-              </div>
-              <div className="flex flex-col justify-end w-full sm:w-9/12">
-                <h1 className="text-2xl sm:text-4xl text-right">Complex</h1>
-                <h1 className="text-2xl sm:text-4xl">Conundrum</h1>
-              </div>
-            </div>
-            <div className="  w-6/12 flex justify-center items-center">
-              <img className="" src={Home} alt="Home" />
-            </div>
           </div>
         </div>
       </div>
@@ -83,7 +50,7 @@ function App(){
       <WeWork />
       <Team />
       <Projects />
-      <ProjectSlider />
+      {/* <ProjectSlider /> */}
       <TeamSlider />
       <ProjectAccordion />
 

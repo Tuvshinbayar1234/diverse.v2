@@ -36,30 +36,30 @@ const WeDraft = () => {
 
 function We () {
     return (
-        <div className='container mx-auto pb-28' style={{fontFamily: 'MagistralRegular'}}>
+        <div className='container mx-auto pb-28 hidden lg:block' style={{fontFamily: 'MagistralRegular'}}>
             <div className='flex items-center'>
                 <div className='w-1/2 py-20 pl-0 lg:pl-10 2xl:pl-24'>
-                    <h2 style={{ fontFamily: 'Magistral', fontSize: 80 }}>Who we are ?</h2>
+                    <h2 className='text-7xl text-center' style={{ fontFamily: 'Magistral',  }}>Who we are ?</h2>
                 </div>
                 <div className='w-1/2 pl-10'>
                     <div>
                         <h3 className='text-2xl' style={{fontFamily: 'Magistral',}}>Our Mission</h3>
-                        <p className='mt-2 text-lg' style={{width: '600px', transform: 'rotate(-1.09deg)'}}>Contribute to the globalization of the world by utilizing the full potential of blockchain and information technology to build a secure, eco-friendly, innovative systems.</p>
+                        <p className='mt-2 text-lg w-124 xl:w-144' style={{ transform: 'rotate(-1.09deg)'}}>Contribute to the globalization of the world by utilizing the full potential of blockchain and information technology to build a secure, eco-friendly, innovative systems.</p>
                     </div>
                     <div className='mt-20'>
                         <h3 className='text-2xl' style={{fontFamily: 'Magistral'}}>Our Vision</h3>
-                        <p className='text-lg mt-2' style={{width: '600px'}}>Becoming a leading blockchain development and consulting firm by providing innovative solutions. Building a Better World from Blockchain</p>
+                        <p className='text-lg mt-2 w-124 xl:w-144' >Becoming a leading blockchain development and consulting firm by providing innovative solutions. Building a Better World from Blockchain</p>
                     </div>
                 </div>
             </div>
             <div className='flex mt-20'>
                 <div className='lg:pl-10 2xl:pl-24 w-1/2'>
                     <h3 className='text-2xl' style={{fontFamily: 'Magistral'}}>Our Values</h3>
-                    <p className='text-lg mt-2' style={{width: '600px', transform: 'rotate(0.88deg)' }}>Specialized and skilled team, good business etiquette, and quality products.</p>
+                    <p className='text-lg mt-2  w-124 xl:w-144' style={{transform: 'rotate(0.88deg)' }}>Specialized and skilled team, good business etiquette, and quality products.</p>
                 </div>
                 <div className='w-1/2 pl-10'>
                     <h3 className='text-2xl' style={{fontFamily: 'Magistral'}}>Our Team</h3>
-                    <p className='text-lg mt-2' style={{width: '600px', transform: 'rotate(0.88deg)' }}>In the 20 months of our operations, we have built a team with growth and pioneering mindset specializing in blockchain and information technology.</p>
+                    <p className='text-lg mt-2 w-124 xl:w-144' style={{transform: 'rotate(0.88deg)' }}>In the 20 months of our operations, we have built a team with growth and pioneering mindset specializing in blockchain and information technology.</p>
                 </div>
             </div>
         </div>
