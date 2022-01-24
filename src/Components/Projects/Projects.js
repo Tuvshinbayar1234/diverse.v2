@@ -1,4 +1,4 @@
-import React ,{useState} from 'react'
+import React ,{useState, Fragment} from 'react'
 import Project1 from '../../assets/project.png'
 import White from '../../assets/whitelogo.png'
 import Mont from '../../assets/MONT.png'
@@ -7,10 +7,14 @@ import ARDMs from '../../assets/ArdMoney.png'
 import DAXL from '../../assets/dax-logo-light.png'
 import DAXLs from '../../assets/dax-logo.png'
 import {FaAngleRight , FaAngleLeft, FaWindowClose} from 'react-icons/fa'
+import { Dialog, Transition } from '@headlessui/react'
+
 
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(-1);
+    const [isOpen, setIsOpen] = useState(false)
+
 
     function showProjectDetail(index) {
         if (index === selectedProject) {
@@ -20,10 +24,21 @@ export default function Projects() {
         }
     }
 
+
+    function openModal(index) {
+        setIsOpen(true)
+        setSelectedProject(index);
+    }
+
+    function closeModal() {
+        setIsOpen(false)
+        setSelectedProject(-1);
+    }
+
     return (
         <div className='container mx-auto pb-40 lg:py-40'>
-            <div className='flex flex-col lg:flex-row items-center'>
-                <div style={{ fontFamily: 'MagistralRegular' }} className='flex pr-24 flex-col w-full lg:w-1/2'>
+            <div className='flex flex-col px-5 md:px-0 lg:flex-row items-center'>
+                <div style={{ fontFamily: 'MagistralRegular' }} className='flex lg:pr-24 flex-col w-full lg:w-1/2'>
                     <h2 className='text-5xl font-bold mb-10' style={{ fontFamily: 'Magistral' }}>Төслүүд</h2>
                     <div>
                         <h3 className='font-bold text-2xl'>Хөгжүүлэлт</h3>
@@ -35,25 +50,37 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className='w-full mt-14 lg:w-1/2  relative '>
-                    <div className='w-full flex flex-wrap'>
+                    <div className='w-full hidden sm:flex flex-wrap'>
                         {
                             projectImages.map((img, index) => (
-                                <div key={index} className='w-1/2 flex justify-center'>
+                                <div key={index} className='w-full sm:w-1/2 flex justify-center'>
                                     <div onClick={() => showProjectDetail(index)}
-                                        className={` ${selectedProject === index ? 'rounded-xl scale-110 border border-black z-30' : 'hover:scale-110 hover:shadow-none shadow-md'} bg-white w-full  h-52 flex  transition transform  cursor-pointer justify-center items-center  `}>
+                                        className={` ${selectedProject === index ? 'rounded-xl scale-110 sm:border border-black z-30' : 'hover:scale-110 hover:shadow-none sm:shadow-md'} bg-white w-full  h-52 flex  transition transform  cursor-pointer justify-center items-center  `}>
                                         {img.component}
                                     </div>
                                 </div>
                             ))
                         }
                     </div>
-                    <div className={`absolute transition flex  text-white top-0 ${selectedProject == -1 ? '-z-10 opacity-0' : 'z-20 opacity-100'}  w-full h-full bg-black rounded-xl`}>
+                    <div className='w-full flex sm:hidden flex-wrap'>
+                        {
+                            projectImages.map((img, index) => (
+                                <div key={index} className='w-full sm:w-1/2 flex justify-center'>
+                                    <div onClick={() => openModal(index)}
+                                        className={` ${selectedProject === index ? 'rounded-xl scale-110 sm:border border-black z-30' : 'hover:scale-110 hover:shadow-none sm:shadow-md'} bg-white w-full  h-52 flex  transition transform  cursor-pointer justify-center items-center  `}>
+                                        {img.component}
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <div className={`absolute transition h-full   text-white top-0 ${selectedProject == -1 ? '-z-10 opacity-0' : 'z-20 opacity-100'}  w-full h-full bg-black rounded-xl`}>
                         {
                             selectedProject !== -1 ? (
-                                <div className={`w-full flex  ${selectedProject >= 2 ? 'flex-col-reverse' : 'flex-col'}`}>
+                                <div className={`w-full h-full flex  ${selectedProject >= 2 ? 'flex-col-reverse' : 'flex-col'}`}>
                                     <div className='flex'>
                                         {(selectedProject === 0 || selectedProject === 2) && <BlankSpace />}
-                                        <div className='w-1/2 pt-10 pl-24'>
+                                        <div className='w-1/2 pt-10 pl-14 md:pl-20 xl:pl-24'>
                                             <ul className='list-disc'>
                                             {
                                                 projects[selectedProject].listsLeft.map(list => (
@@ -73,6 +100,42 @@ export default function Projects() {
                         }
                     </div>
                 </div>
+                <Transition appear show={isOpen} as={Fragment} >
+                    <Dialog as="div" className="fixed inset-0 z-50 overflow-y-auto bg-white" onClose={closeModal} >
+                        <div className="min-h-screen text-center">
+                            <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="ease-in duration-200" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">
+                                <div className='h-screen sm:p-10 w-screen '>
+                                    <div className='text-left text-lg py-5 px-5' style={{ fontFamily: 'MagistralRegular' }} onClick={() => closeModal()}>
+                                        <div className='shadow-md inline p-2'>
+                                            Буцах
+                                        </div>
+                                    </div>
+                                    {
+                                        projects[selectedProject] ? (
+                                            <div className='px-5' style={{ fontFamily: 'MagistralRegular' }}>
+                                                <div className='text-3xl' style={{ fontFamily: 'Magistral' }}>{projects[selectedProject].name}</div>
+                                                <div className='text-left mt-5'  >{projects[selectedProject].description}</div>
+                                                <ul className='list-disc text-left px-5 mt-8'>
+                                                    {
+                                                        projects[selectedProject].listsLeft.map(list => (
+                                                            <li>{list}</li>
+                                                        ))
+                                                    }
+                                                </ul>
+                                                <div className=' mt-10'>
+                                                    <a href={projects[selectedProject].link} target='_blank' className='underline text-lg '>
+                                                        {projects[selectedProject].link}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        ) : (<></>)
+                                    }
+
+                                </div>
+                            </Transition.Child>
+                        </div>
+                    </Dialog>
+                </Transition>
             </div>
         </div>
     )

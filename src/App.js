@@ -17,23 +17,13 @@ import axios from "axios";
 
 function App(){
 
-
-  const SuccessData = {
-    title: "Амжилттай",
-    type: "Амжилттай",
-    text: "Таны захиа амжилттай илгээгдлээ",
-    footer: ""
-  };
-
   return (
     <div className="w-full overflow-x-hidden" style={{ backgroundColor: 'white' }}>
-
-
       {/* <Nav /> */}
       {/* <Cursor /> */}
       <div className="container mx-auto min-h-screen relative  px-5 flex items-center">
-        <div className="flex w-full justify-evenly" style={{ fontFamily: 'Magistral' }}>
-          <div className='w-1/2 text-5xl lg:text-7xl xl:text-8xl'>
+        <div className="flex  w-full justify-evenly" style={{ fontFamily: 'Magistral' }}>
+          <div className='w-full sm:w-1/2 flex justify-center text-5xl lg:text-7xl xl:text-8xl'>
             <h1 className='flex flex-col leading-snug justify-center h-full'>
               <span>Simple</span>
               <span>Solutions For</span>
@@ -41,7 +31,7 @@ function App(){
               <span>Connection</span>
             </h1>
           </div>
-          <div className="w-1/2 flex justify-end">
+          <div className="w-full h-full sm:h-auto sm:w-1/2 absolute sm:static opacity-10 sm:opacity-100 px-5 sm:px-0  top-0  flex items-center sm:justify-end">
             <ChainSvg />
           </div>
         </div>
@@ -53,51 +43,14 @@ function App(){
       {/* <ProjectSlider /> */}
       <TeamSlider />
       <ProjectAccordion />
-
-      <ContactUs SuccessData={SuccessData} />
-
-
-      {/* mobile */}
-      <div className="container mx-auto py-20 block xl:hidden">
-        <div className="">
-          <h1 className=" text-4xl text-center" style={{ fontFamily: 'Magistral' }}>Холбоо барих</h1>
-        </div>
-        <div className="flex flex-col justify-center items-center mx-12 py-10">
-          <div className="w-full flex flex-col justify-center items-center">
-            <div className="flex flex-col pb-3">
-              <h1 className=" text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Нэр</h1>
-              <input className=" w-72 pt-2 outline-none border-b" placeholder="Нэр" style={{ backgroundColor: '#f7f7f9' }} />
-            </div>
-            <div className="flex flex-col pb-3">
-              <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Цахим шуудан</h1>
-              <input className=" w-72 pt-2 outline-none border-b" placeholder="Цахим шуудан" style={{ backgroundColor: '#f7f7f9' }} />
-            </div>
-            <div className="flex flex-col pb-3">
-              <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Утас</h1>
-              <input className=" w-72 pt-2 outline-none border-b" placeholder="Утас" style={{ backgroundColor: '#f7f7f9' }} />
-            </div>
-            <div className="flex flex-col justify-evenly space-x-6">
-              <div className="flex flex-col">
-                <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Дэлгэрэнгүй</h1>
-                <textarea id="message" rows="4" className="w-72 pt-2 outline-none border-b" style={{ backgroundColor: '#f7f7f9' }} placeholder="Бичих..."></textarea>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <div className="flex flex-col items-center justify-center py-5">
-            <AlertSuccess {...SuccessData} />
-          </div>
-        </div>
-      </div>
-
+      <ContactUs />
       <Footer />
     </div>
   );
 
 }
 
-function ContactUs({ SuccessData }) {
+function ContactUs() {
   let [email, setEmail] = useState('');
   let [name, setName] = useState('');
   let [phoneNumber, setPhoneNumber] = useState('');
@@ -112,7 +65,6 @@ function ContactUs({ SuccessData }) {
         phoneNumber,
         description
       })
-      console.log(res.data)
     } catch (e) {
       console.log(e)
     }
@@ -137,16 +89,21 @@ function ContactUs({ SuccessData }) {
 
 
   return (
-    <div className="container mx-auto py-20 hidden xl:block">
+    <div className="container mx-auto py-20 ">
       <div className="">
-        <h1 className="text-5xl text-center" style={{ fontFamily: 'Magistral' }}>Холбоо барих</h1>
+        <h1 className="text-4xl md:text-5xl text-center" style={{ fontFamily: 'Magistral' }}>Холбоо барих</h1>
       </div>
-      <div className='flex space-x-14 py-20 justify-center font-light'>
+      <div className='space-x-14 py-20 hidden lg:flex justify-center font-light'>
         <div className='flex flex-col'>
           <div className='flex space-x-14'>
             <div>
               <div className='text-sm'>NAME</div>
-              <input placeholder='Baldan' className='w-72 font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black ' type="text" />
+              <input
+                placeholder='Baldan'
+                className='w-72 font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black '
+                type="text"
+                onChange={(e) => setName(e.target.value)}
+              />
             </div>
             <div>
               <div className='text-sm'>E-MAIL</div>
@@ -160,7 +117,13 @@ function ContactUs({ SuccessData }) {
           </div>
           <div className='w-full mt-8'>
             <div className='text-sm'>MESSAGE</div>
-            <textarea placeholder='Message here' rows='1' className='w-full font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black ' type="text" />
+            <textarea
+              placeholder='Message here'
+              rows='1'
+              className='w-full font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black '
+              type="text"
+              onChange={(e) => setDescription(e.target.value)}
+            />
           </div>
         </div>
         <div className='flex flex-col justify-between'>
@@ -174,44 +137,62 @@ function ContactUs({ SuccessData }) {
               onChange={(e) => handlePhoneNumberChange(e)}
             />
           </div>
-          <button className='w-full py-4 rounded-md bg-blue-500 hover:opacity-90 text-center text-white font-medium'>SEND MESSAGE</button>
+          <button
+            onClick={submit}
+            className='w-full py-4 rounded-md bg-blue-500 hover:opacity-90 text-center text-white font-medium'
+          >
+            Илгээх
+          </button>
         </div>
       </div>
-      {/* <div className="w-full py-10">
-        <div className="flex w-full justify-center items-center">
-          <div className="flex items-center justify-center flex-wrap w-3/4 space-x-5">
-            <div className="flex flex-col">
-              <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Нэр</h1>
-              <input
-               value={name} onChange={(e) => setName(e.target.value)}
-                className=" w-72 py-4 outline-none border-b ml-3" placeholder="Нэр" style={{ backgroundColor: '#f7f7f9' }} />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Цахим шуудан</h1>
-              <input
-               value={email} onChange={(e) => setEmail(e.target.value)}
-                className="  w-72 py-4 outline-none border-b ml-3" placeholder="Цахим шуудан" style={{ backgroundColor: '#f7f7f9' }} />
-            </div>
-            <div className="flex flex-col">
-              <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Утас</h1>
-              <input 
-                value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)}
-               className="  w-72 py-4 outline-none border-b" placeholder="Утас" style={{ backgroundColor: '#f7f7f9' }} />
-            </div>
-            <div className="flex justify-center space-x-9 w-full">
-              <div className="flex flex-col py-5">
-                <h1 className="text-xs font-bold" style={{ fontFamily: 'MagistralRegular' }}>Дэлгэрэнгүй</h1>
-                <textarea
-                  value={description} onChange={(e) => setDescription(e.target.value)}
-                 id="message" className="h-14 lg:w-132 sm:w-80 py-4 outline-none border-b ml-3" style={{ backgroundColor: '#f7f7f9' }} placeholder="Бичих..."></textarea>
-              </div>
-            </div>
-              <div onClick={submit} className='bg-blue-300 py-4 px-10 rounded-lg'>
-                Submit
-              </div>
-          </div>
+      <div className='flex px-5 sm:px-10 lg:px-0 lg:hidden mt-10 flex-col space-y-5'>
+        <div>
+          <div className='text-sm'>NAME</div>
+          <input
+            placeholder='Baldan'
+            className='font-thin w-full outline-none border-b px-2 pt-1 pb-2 focus:border-black '
+            type="text"
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
-      </div> */}
+        <div>
+          <div className='text-sm'>E-MAIL</div>
+          <input
+            placeholder='baldan@gmail.com'
+            className={`w-full ${emailValidationFlag ? 'focus:border-black' : 'focus:border-red-400'}  font-thin outline-none border-b px-2 pt-1 pb-2  `} type="text"
+            value={email}
+            onChange={(e) => handleEmailChange(e)}
+          />
+        </div>
+        <div>
+          <div className='text-sm'>PHONE NUMBER</div>
+          <input
+            placeholder='99887766'
+            className='w-full font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black '
+            type="text"
+            value={phoneNumber}
+            onChange={(e) => handlePhoneNumberChange(e)}
+          />
+        </div>
+        <div className=''>
+          <div className='text-sm'>MESSAGE</div>
+          <textarea
+            placeholder='Message here'
+            rows='1'
+            className='w-full font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black '
+            type="text"
+            onChange={(e) => setDescription(e.target.value)}
+          />
+        </div>
+        <div className='pt-5'>
+          <button
+            onClick={submit}
+            className='w-full  py-4 rounded-md bg-blue-500 hover:opacity-90 text-center text-white font-medium'
+          >
+            Илгээх
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

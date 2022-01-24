@@ -29,8 +29,8 @@ const TeamSlider = () => {
 
     return (
         <div className="lg:hidden block w-full container mx-auto">
-            <div className=" text-lg pb-5 flex justify-between items-center">
-                <h1>Манай хамт олон</h1>
+            <div className=" text-lg px-5 md:px-0 pb-5 flex justify-between items-center">
+                <h2>Манай хамт олон</h2>
                 <p onClick={openModal} className=" cursor-pointer" style={{ fontFamily: 'MagistralRegular' }}>Бүгдийг үзэх</p>
             </div>
             <div className='flex overflow-x-scroll pb-4'>
@@ -55,8 +55,10 @@ const TeamSlider = () => {
                     <div className="min-h-screen text-center">
                         <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="ease-in duration-200" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">
                             <div className='h-screen sm:p-10 w-screen '>
-                                <div className='text-left text-lg py-3 px-10' style={{ fontFamily: 'MagistralRegular' }} onClick={() => closeModal()}>
-                                    Буцах
+                                <div className='text-left text-lg py-5 px-5' style={{ fontFamily: 'MagistralRegular' }} onClick={() => closeModal()}>
+                                    <div className='p-3 shadow-md inline'>
+                                        Буцах
+                                    </div>
                                 </div>
                                 <div className='w-full  flex flex-wrap'>
                                     {team.map((member, index) => (
