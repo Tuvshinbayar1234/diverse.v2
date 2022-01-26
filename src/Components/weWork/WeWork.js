@@ -6,17 +6,17 @@ const WeWork = () => {
             <div className='container pt-10 pb-20 sm:pb-40 mx-auto hidden xl:block'>
                 <div className='flex justify-between px-5 w-full space-x-10'>
                     {/* <span id='WeWork' class="relative w-128 h-72 flex-col inline-flex justify-center  rounded-2xl " style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}> */}
-                    <span id='WeWork' class="relative w-128 h-80 pt-10 shadow-md">
+                    <span id='WeWork' class="relative w-128 h-80 pt-5 shadow-md">
                         <h3 className=' text-4xl w-3/12 mx-10 font-bold' style={{ fontFamily: 'Magistral' }}>Smart Contract</h3>
                         <p className=' w-3/4 mx-10 py-5' style={{ fontFamily: 'MagistralRegular' }}>Developing smart contracts in accordance with the current standards.</p>
                     </span>
                     {/* <span class="relative w-128 h-72 flex-col inline-flex justify-center mt-36  rounded-2xl " style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}> */}
-                    <span class="relative w-128 h-80 flex-col pt-10  mt-36  shadow-md " >
+                    <span class="relative w-128 h-80 flex-col pt-5  mt-36  shadow-md " >
                         <h3 className=' text-4xl w-3/12 mx-10 font-bold' style={{ fontFamily: 'Magistral' }}>Decentralized Applications</h3>
                         <p className=' w-3/4 mx-10 py-5' style={{ fontFamily: 'MagistralRegular' }}>Security and Transparency have been a problem to solve in any system. Decentralized applications built on blockchain technology has transparency and trust built into the system and provide a solution to the aforementioned problem.</p>
                     </span>
                     {/* <span class="relative w-128 h-72 flex-col inline-flex justify-center  rounded-2xl " style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}> */}
-                    <span class="relative w-128 h-80 flex-col pt-10  shadow-md " >
+                    <span class="relative w-128 h-80 flex-col pt-5  shadow-md " >
                         <h3 className=' text-4xl w-3/12 mx-10 font-bold' style={{ fontFamily: 'Magistral' }}>Blockchain Consultation</h3>
                         <p className=' w-3/4 mx-10 py-5' style={{ fontFamily: 'MagistralRegular' }}>Recommend for those who are exploring blockchain and groundbreaking information technology as part of a solution to their products, services.</p>
                     </span>

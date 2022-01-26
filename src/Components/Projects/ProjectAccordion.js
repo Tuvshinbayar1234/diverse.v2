@@ -9,7 +9,7 @@ const ProjectAccordion = () => {
         <div className='container mx-auto block xl:hidden'>
             <div className='pt-10 px-5 container flex flex-col w-full'>
                 <div className='text-4xl mb-3' style={{fontFamily: 'Magistral'}}>
-                    Бид ?
+                    Who we are ?
                 </div>
                 {
                     whoWeAreLists.map((list, index) => (
@@ -44,20 +44,20 @@ const ProjectAccordion = () => {
 
 let whoWeAreLists = [
     {
-        title: 'Эрхэм зорилго',
-        description: 'Блокчэйн технологийн шийдлийг хамгийн өндөр түвшинд хөгжүүлж, харилцагчиддаа үнэ цэнийг бүтээхэд хамтран ажиллахыг зорьдог.'
+        title: 'Our Mission',
+        description: 'Contribute to the globalization of the world by utilizing the full potential of blockchain and information technology to build a secure, eco-friendly, innovative systems.'
     },
     {
-        title: 'Алсын хараа',
-        description: 'Монгол хөгжүүлэгчдийг блокчэйн хөгжүүлэлтэд бэлтгэж, блокчэйн шийдлээр олон улсын тавцанд өрсөлдөх.'
+        title: 'Our Vision',
+        description: 'Becoming a leading blockchain development and consulting firm by providing innovative solutions. Building a Better World from Blockchain'
     },
     {
-        title: 'Бидний үнэ цэн',
-        description: 'Өөртөө итгэлтэй, чадварлаг, эрч хүчтэй залуусыг шалгаруулан бэлтгэж, харилцагчдынхаа бүтээгдэхүүнийг хамгийн өндөр түвшинд хүргээд зогсохгүй цаашдын үйл ажиллагааг дэмжин ажилладаг нь бидний үнэ цэн болно.'
+        title: 'Our Values',
+        description: 'Specialized and skilled team, good business etiquette, and quality products.'
     },
     {
-        title: 'Бид хэн бэ',
-        description: '“Дайверс Солюшнс ХХК” компани нь чадварлаг, эрч хүчтэй 12 хүний бүрэлдэхүүнтэйгээр таны компанийн дижитал шилжилтийн гүүрийг үүсгэхээр ажиллаж байна.'
+        title: 'Our Team',
+        description: 'In the 20 months of our operations, we have built a team with growth and pioneering mindset specializing in blockchain and information technology.'
     },
 ]
 

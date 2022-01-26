@@ -26,12 +26,11 @@ const TeamSlider = () => {
         setIsOpen(false)
     }
 
-
     return (
         <div className="lg:hidden block w-full container mx-auto">
-            <div className=" text-lg px-5 md:px-0 pb-5 flex justify-between items-center">
-                <h2>Манай хамт олон</h2>
-                <p onClick={openModal} className=" cursor-pointer" style={{ fontFamily: 'MagistralRegular' }}>Бүгдийг үзэх</p>
+            <div style={{fontFamily: 'Magistral'}} className=" text-lg px-5 md:px-0 pb-5 flex justify-between items-center">
+                <h2 >Members</h2>
+                <p onClick={openModal} className=" cursor-pointer underline" >See all</p>
             </div>
             <div className='flex overflow-x-scroll pb-4'>
                 {team.map((i, x) => {
@@ -57,7 +56,7 @@ const TeamSlider = () => {
                             <div className='h-screen sm:p-10 w-screen '>
                                 <div className='text-left text-lg py-5 px-5' style={{ fontFamily: 'MagistralRegular' }} onClick={() => closeModal()}>
                                     <div className='p-3 shadow-md inline'>
-                                        Буцах
+                                        Back
                                     </div>
                                 </div>
                                 <div className='w-full  flex flex-wrap'>
@@ -80,62 +79,63 @@ const TeamSlider = () => {
 
 
 const team = [
+
     {
         img: eegii,
-        name: 'М. Энх-Амгалан',
+        name: 'M. Enkhamgalan',
         title: 'CEO',
     },
     {
         img: odko,
-        name: 'Г. Мөнх-Од',
+        name: 'G. Munkod',
         title: 'CTO',
     },
     {
         img: bo,
-        name: 'М. Болортоль',
+        name: 'M. Bolortoli',
         title: 'COO',
     },
     {
         img: anhaa,
-        name: 'Д. Анхбаясгалан',
+        name: 'D. Ankhbayasgalan',
         title: 'Advisor',
     },
     {
         img: tulgaa,
-        name: 'Б. Баттулга',
+        name: 'B. Battulga',
         title: 'FullStack Developer',
     },
     {
         img: buri,
-        name: 'Б. Бүри',
+        name: 'B. Buri',
         title: 'DevOps',
     },
     {
         img: tseku,
-        name: 'Т. Бумцэнд',
+        name: 'T. Bumtsend',
         title: 'Designer',
     },
     {
         img: muugii,
-        name: 'О. Мөнхзориг',
+        name: 'O. Munkhzorig',
         title: 'Developer',
     },
     {
         img: zaya,
-        name: 'Ж. Амарзаяа',
+        name: 'J. Amarzaya',
         title: 'Secretary',
     },
     {
         img: amaraa,
-        name: 'А. Амартүвшин',
+        name: 'A. Amartuvshin',
         title: 'Blockchain Consultant',
     },
     {
         img: Bataa,
-        name: 'Г. Ууганбат',
+        name: 'G. Uuganbat',
         title: 'Developer',
     },
-
 ]
+
 
 export default TeamSlider;

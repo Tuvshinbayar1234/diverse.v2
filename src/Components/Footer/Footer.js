@@ -1,33 +1,33 @@
 import React from 'react'
 import logo from '../../assets/footerlogo.png'
-import {FaInstagram , FaFacebookF , FaLinkedinIn, FaGithub} from 'react-icons/fa'
+import { FaInstagram, FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
     return (
-        <div className='w-full py-5 px-0 sm:px-10' style={{backgroundColor: '#1E1E1E'}}>
+        <div className='w-full py-5 px-0 sm:px-10' style={{ backgroundColor: '#1E1E1E' }}>
             <div className='hidden sm:block'>
                 <div className='container mx-auto flex px-5 space-x-24 items-center'>
                     <div className=''>
                         <img alt='IMAGE' src={logo} />
                     </div>
                     <div className='text-white text-xs'>
-                        <div className='flex space-x-2'>
-                            <h1 style={{fontFamily:'MagistralRegular'}}>Имайл:</h1>
-                            <span style={{fontFamily:'MagistralRegular'}}>info@dsolutions.mn</span>
+                        <div className='flex '>
+                            <p className='w-16 flex-shrink-0' style={{ fontFamily: 'MagistralRegular' }}>E-mail:</p>
+                            <span style={{ fontFamily: 'MagistralRegular' }}>info@dsolutions.mn</span>
                         </div>
-                        <div className='py-5 flex space-x-5'>
-                            <h1 style={{fontFamily:'MagistralRegular'}}>Хаяг:</h1>
-                            <span style={{fontFamily:'MagistralRegular'}}>Сүхбаатар дүүрэг, 8-р хороо, Централ цамхаг, 17 давхар Өдөр бүр</span>
+                        <div className='py-5 flex '>
+                            <p className='w-16 flex-shrink-0' style={{ fontFamily: 'MagistralRegular' }}>Address:</p>
+                            <span style={{ fontFamily: 'MagistralRegular' }}>Central tower, 2 Sukhbaatar Square, Khoroo 8, Sukhbaatar District 14200 Ulaanbaatar, Mongolia</span>
                         </div>
-                        <div className='flex space-x-5'>
-                            <h1 style={{fontFamily:'MagistralRegular'}}>Утас:</h1>
-                            <span style={{fontFamily:'MagistralRegular'}}>+976 91951199</span>
+                        <div className='flex '>
+                            <p className='w-16 flex-shrink-0' style={{ fontFamily: 'MagistralRegular' }}>Phone:</p>
+                            <span style={{ fontFamily: 'MagistralRegular' }}>+976 91951199</span>
                         </div>
                         <div className='flex text-xl space-x-5 py-5'>
-                        <a className=' cursor-pointer' href='https://www.instagram.com/diverse.solutions/' target='_blank'><FaInstagram /></a> 
-                        <a className=' cursor-pointer' href='https://www.facebook.com/aidiversesolutions/' target='_blank'><FaFacebookF /></a>
-                        <a className=' cursor-pointer' href='https://www.linkedin.com/company/diversesolutions/' target='_blank'><FaLinkedinIn /></a> 
-                            <FaGithub />
+                            <a className=' cursor-pointer' href='https://www.instagram.com/diverse.solutions/' target='_blank'><FaInstagram /></a>
+                            <a className=' cursor-pointer' href='https://www.facebook.com/aidiversesolutions/' target='_blank'><FaFacebookF /></a>
+                            <a className=' cursor-pointer' href='https://www.linkedin.com/company/diversesolutions/' target='_blank'><FaLinkedinIn /></a>
+                            <a className=' cursor-pointer' href='https://github.com/DiverseSolutions' target='_blank'><FaGithub /></a>
                         </div>
                     </div>
                 </div>
@@ -38,26 +38,26 @@ const Footer = () => {
                         <img alt='IMAGE' width={'101px'} height={'70px'} src={logo} />
                     </div>
                     <div className=' w-6/12 text-xs text-white'>
-                        <div className='flex space-x-2'>
-                            <p style={{fontFamily:'MagistralRegular'}}>Имайл:</p>
-                            <p style={{fontFamily:'MagistralRegular'}}>info@dsolutions.mn</p>
+                        <div className='flex'>
+                            <p className='w-16 flex-shrink-0' style={{ fontFamily: 'MagistralRegular' }}>E-mail:</p>
+                            <p style={{ fontFamily: 'MagistralRegular' }}>info@dsolutions.mn</p>
                         </div>
-                        <div className='py-3 flex space-x-5'>
-                            <p style={{fontFamily:'MagistralRegular'}}>Хаяг:</p>
-                            <p style={{fontFamily:'MagistralRegular'}}>Цэнтрал товер 17 давхар</p>
+                        <div className='py-3 flex '>
+                            <p className='w-16 flex-shrink-0' style={{ fontFamily: 'MagistralRegular' }}>Address:</p>
+                            <p style={{ fontFamily: 'MagistralRegular' }}>Central tower, 2 Sukhbaatar Square, Khoroo 8, Sukhbaatar District 14200 Ulaanbaatar, Mongolia</p>
                         </div>
-                        <div className='flex space-x-5'>
-                            <p style={{fontFamily:'MagistralRegular'}}>Утас:</p>
-                            <p style={{fontFamily:'MagistralRegular'}}>+976 91951199</p>
+                        <div className='flex '>
+                            <p className='w-16 flex-shrink-0' style={{ fontFamily: 'MagistralRegular' }}>Phone:</p>
+                            <p style={{ fontFamily: 'MagistralRegular' }}>+976 91951199</p>
                         </div>
                     </div>
                 </div>
                 <div className='flex text-2xl text-center justify-center items-center text-white space-x-5 py-5'>
-                       <a className=' cursor-pointer' href='https://www.instagram.com/diverse.solutions/' target='_blank'><FaInstagram /></a> 
-                       <a className=' cursor-pointer' href='https://www.facebook.com/aidiversesolutions/' target='_blank'><FaFacebookF /></a>
-                       <a className=' cursor-pointer' href='https://www.linkedin.com/company/diversesolutions/' target='_blank'><FaLinkedinIn /></a> 
-                        <FaGithub />
-                    </div>
+                    <a className=' cursor-pointer' href='https://www.instagram.com/diverse.solutions/' target='_blank'><FaInstagram /></a>
+                    <a className=' cursor-pointer' href='https://www.facebook.com/aidiversesolutions/' target='_blank'><FaFacebookF /></a>
+                    <a className=' cursor-pointer' href='https://www.linkedin.com/company/diversesolutions/' target='_blank'><FaLinkedinIn /></a>
+                    <a className=' cursor-pointer' href='https://github.com/DiverseSolutions' target='_blank'><FaGithub /></a>
+                </div>
             </div>
         </div>
     )

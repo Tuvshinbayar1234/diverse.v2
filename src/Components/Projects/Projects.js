@@ -2,7 +2,7 @@ import React ,{useState, Fragment} from 'react'
 import Project1 from '../../assets/project.png'
 import White from '../../assets/whitelogo.png'
 import Mont from '../../assets/MONT.png'
-import Monnom from '../../assets/Monnom.png'
+import Krypto from '../../assets/krypto.png'
 import ARDMs from '../../assets/ArdMoney.png'
 import DAXL from '../../assets/dax-logo-light.png'
 import DAXLs from '../../assets/dax-logo.png'
@@ -38,15 +38,15 @@ export default function Projects() {
     return (
         <div className='container mx-auto pb-40 lg:py-40'>
             <div className='flex flex-col px-5 md:px-0 lg:flex-row items-center'>
-                <div style={{ fontFamily: 'MagistralRegular' }} className='flex lg:pr-24 flex-col w-full lg:w-1/2'>
-                    <h2 className='text-5xl font-bold mb-10' style={{ fontFamily: 'Magistral' }}>Төслүүд</h2>
+                <div style={{ fontFamily: 'MagistralRegular' }} className='flex  lg:pr-28 xl:pr-36 2xl:pr-44 flex-col w-full lg:w-1/2'>
+                    <h2 className='text-5xl font-bold mb-10' style={{ fontFamily: 'Magistral' }}>Projects</h2>
                     <div>
-                        <h3 className='font-bold text-2xl'>Хөгжүүлэлт</h3>
-                        <p className='mt-2'>Бид хэрэглэгчдийнхээ онцлогийг шинжлэн, хэрэгцээнд зориулсан дизайн, брэндинг, вэбсайт, вэб болон утасны апп, блокчэйн дээр суурилсан токен, dapp-н ухаалаг гэрээг хөгжүүлж байна. Бид Монголын анхны төгрөгтэй 1:1 үнэ цэнтэй стэйблкойн болон Монголын анхны төвлөрсөн бус санхүүгийн систем болох ArdMoney төслийг гардан хэрэгжүүлж байгаа болно.</p>
+                        <h3 className='font-bold text-2xl'>Blockchain Consultation</h3>
+                        <p className='mt-2'>Recommend for those who are exploring blockchain and groundbreaking information technology as part of a solution to their products, services.</p>
                     </div>
-                    <div className='mt-5'>
-                        <h3 className='font-bold text-2xl' >Зөвлөх</h3>
-                        <p className='mt-2'>Блокчэйн болон бусад дэвшилтэт технологийн шийдлийг таны бизнест тохируулан боловсруулж, зөвлөж өгөх болно. Манай харилцагчид мөн бидний улирал бүр гаргах технологийн тайлангуудыг хамгийн түрүүнд хүлээн авдаг.</p>
+                    <div className='mt-8'>
+                        <h3 className='font-bold text-2xl' >Decentralized Applications</h3>
+                        <p className='mt-2'>Security and Transparency have been a problem to solve in any system. Diverse Solutions is building Decentralized applications built on blockchain technology has transparency and trust built into the system and provide a solution to the aforementioned problem.</p>
                     </div>
                 </div>
                 <div className='w-full mt-14 lg:w-1/2  relative '>
@@ -80,7 +80,7 @@ export default function Projects() {
                                 <div className={`w-full h-full flex  ${selectedProject >= 2 ? 'flex-col-reverse' : 'flex-col'}`}>
                                     <div className='flex'>
                                         {(selectedProject === 0 || selectedProject === 2) && <BlankSpace />}
-                                        <div className='w-1/2 pt-10 pl-14 md:pl-20 xl:pl-24'>
+                                        <div className='w-1/2 pt-10 pl-14 xl:pl-20 '>
                                             <ul className='list-disc'>
                                             {
                                                 projects[selectedProject].listsLeft.map(list => (
@@ -91,7 +91,7 @@ export default function Projects() {
                                         </div>
                                         {(selectedProject === 1 || selectedProject === 3) && <BlankSpace />}
                                     </div>
-                                    <div className={`px-10 h-1/2  flex flex-col justify-center`}>
+                                    <div className={`px-10 xl:px-16 h-1/2  flex flex-col justify-center`}>
                                         <h3>{projects[selectedProject].name}</h3>
                                         <p className='mt-2'>{projects[selectedProject].description}</p>
                                     </div>
@@ -106,8 +106,8 @@ export default function Projects() {
                             <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0 scale-95" enterTo="opacity-100 scale-100" leave="ease-in duration-200" leaveFrom="opacity-100 scale-100" leaveTo="opacity-0 scale-95">
                                 <div className='h-screen sm:p-10 w-screen '>
                                     <div className='text-left text-lg py-5 px-5' style={{ fontFamily: 'MagistralRegular' }} onClick={() => closeModal()}>
-                                        <div className='shadow-md inline p-2'>
-                                            Буцах
+                                        <div className='shadow-md inline p-3'>
+                                            Back
                                         </div>
                                     </div>
                                     {
@@ -152,7 +152,7 @@ const projectImages = [
         component: <img className='w-40 h-40' src={DAXLs} alt="dax" />
     },
     {
-        component: <img className='w-40 h-40' src={Monnom} alt="dax" />
+        component: <img className='w-40 h-40' src={Krypto} alt="dax" />
     },
     {
         component: <img className='w-40 h-40' src={Mont} alt="dax" />
@@ -167,133 +167,41 @@ const projects = [
     {
         name: 'DAX',
         link: 'https://dax.mn/',
-        description: 'Монголын том 4 биржийн нэг. Хамгийн анх Ард Санхүүгийн Нэгдэлийн крипто арилжааны биржийг',
+        description: 'DAX( Digital Assets Exchange) is the first Mongolian crypto and security token exchange operating since the December of 2020 with the investment of Ard Financial Group.',
         listsLeft: [
-            'Development',
-            'Code',
-            'FrontEnd',
-            'BackEnd',
-            'Designs',
-        ],
-        listsRight: [
-            'Code',
-            'BackEnd',
-            'Designs',
-            'Designs',
+            'Front-End Code',
+            'UI / UX Design'
         ],
     },
     {
-        name: 'MONNOM',
-        link: 'https://monnom.mn/',
-        description: '“Monnom” аппликейшн нь цахим, аудио, хэвлэмэл номыг онлайнаар худалдаалдаг номын төвлөрсөн платформ юм. Бид 2021 оноос үйл ажиллагаагаа явуулж эхэлсэн ба Монгол хэл дээрх бүх төрлийн номыг цахим, аудио, хэвлэмэл гэсэн гурван хэлбэрээр хэрэглэгчдэд хүргэдэг.',
+        name: 'KryptoMN',
+        link: '',
+        description: 'KryptoMN is a Mongolian media focused on providing an all-in-one source of truth for cryptocurrencies and other blockchain-based innovations.',
         listsLeft: [
-            'Development',
-            'Code',
-            'FrontEnd',
-            'BackEnd',
-            'Designs',
+            'Front-End Code',
+            'Back-End Code',
+            'Architecture Setup & Maintenance',
+            'UI / UX Design'
         ],
-        listsRight: [
-            'Code',
-            'BackEnd',
-            'Designs',
-            'Designs',
+    },
+    {
+        name: 'ArdMoney',
+        link: 'https://ardmoney.com/',
+        description: 'Blockchain technology becomes more sophisticated, its use is becoming more advanced and closer to people’s daily needs.  As the first DAO project in Mongolia, ArdMoney brings decentralized financial benefits closer to the people.',
+        listsLeft: [
+            'Website Front-End Code',
+            'Website UI / UX Design',
+            'Smart Contract Code',
         ],
     },
     {
         name: 'MONT',
         link: 'https://stablecoin.mn/',
-        description: 'Монголын анхны Стэйблкойн. Монгол төгрөгтэй үнэ цэнээ аргамжсан энэхүү койн нь крипто арилжаанд төгрөгийг төлөөлөх хамгийн зөв хэрэгсэл болно. Энэхүү койны ухаалаг гэрээг Diverse Solutions хөгжүүлж, хэрэглээнд нэвтрүүлсэн болно.',
+        description: 'The value of MONT is guaranteed and backed by Mongolian Tugrik. Every MONT is always 100% backed by our reserves. MONT will have regular audit reports to ensure the reserves are being maintained.',
         listsLeft: [
-            'Development',
-            'Code',
-            'FrontEnd',
-            'BackEnd',
-            'Designs',
-        ],
-        listsRight: [
-            'Code',
-            'BackEnd',
-            'Designs',
-            'Designs',
+            'Website Front-End Code',
+            'Website UI / UX Design',
+            'Stable Coin Smart Contract Code',
         ],
     },
-    {
-        name: 'ARDMONEY',
-        link: 'https://ardmoney.com/',
-        description: 'Монголын анхны DAO төсөл. Төвлөрсөн бус санхүүг Монголын болон Төв Азийн зах зээлд авчирч, крипто хэрэглэгчдийн хэрэглээнд нэвтрэх зорилготой.',
-        listsLeft: [
-            'Development',
-            'Code',
-            'FrontEnd',
-            'BackEnd',
-            'Designs',
-        ],
-        listsRight: [
-            'Code',
-            'BackEnd',
-            'Designs',
-            'Designs',
-        ],
-    },
-    // {
-    //     name: 'MONNOM',
-    //     link: 'https://monnom.mn/',
-    //     description: '“Monnom” аппликейшн нь цахим, аудио, хэвлэмэл номыг онлайнаар худалдаалдаг номын төвлөрсөн платформ юм. Бид 2021 оноос үйл ажиллагаагаа явуулж эхэлсэн ба Монгол хэл дээрх бүх төрлийн номыг цахим, аудио, хэвлэмэл гэсэн гурван хэлбэрээр хэрэглэгчдэд хүргэдэг.',
-    //     development: 'Development',
-    //     development1: 'Code',
-    //     development2: 'FrontEnd',
-    //     development3: 'BackEnd',
-    //     development4: 'Designs',
-    //     development5: 'Designs',
-    //     development6: 'Designs',
-    // },
-    // {
-    //     name: 'MONT',
-    //     link: 'https://www.stablecoin.mn/',
-    //     description: 'Монголын анхны Стэйблкойн. Монгол төгрөгтэй үнэ цэнээ аргамжсан энэхүү койн нь крипто арилжаанд төгрөгийг төлөөлөх хамгийн зөв хэрэгсэл болно. Энэхүү койны ухаалаг гэрээг Diverse Solutions хөгжүүлж, хэрэглээнд нэвтрүүлсэн болно.',
-    //     development: 'BackEnd',
-    //     development1: 'Website front-end',
-    //     development2: 'Token smart contracts',
-    //     development3: 'Website front-end',
-    //     development4: 'Design',
-    //     development5: 'Branding',
-    //     development6: 'Ecosystem consulting',
-    // },
-    // {
-    //     name: 'MONNOM',
-    //     link: 'https://monnom.mn/',
-    //     description: '“Monnom” аппликейшн нь цахим, аудио, хэвлэмэл номыг онлайнаар худалдаалдаг номын төвлөрсөн платформ юм. Бид 2021 оноос үйл ажиллагаагаа явуулж эхэлсэн ба Монгол хэл дээрх бүх төрлийн номыг цахим, аудио, хэвлэмэл гэсэн гурван хэлбэрээр хэрэглэгчдэд хүргэдэг.',
-    //     development: 'Development',
-    //     development1: 'Code',
-    //     development2: 'FrontEnd',
-    //     development3: 'BackEnd',
-    //     development4: 'Designs',
-    //     development5: 'Designs',
-    //     development6: 'Designs',
-    // },
-    // {
-    //     name: 'MONT',
-    //     link: 'https://www.stablecoin.mn/',
-    //     description: 'Монголын анхны Стэйблкойн. Монгол төгрөгтэй үнэ цэнээ аргамжсан энэхүү койн нь крипто арилжаанд төгрөгийг төлөөлөх хамгийн зөв хэрэгсэл болно. Энэхүү койны ухаалаг гэрээг Diverse Solutions хөгжүүлж, хэрэглээнд нэвтрүүлсэн болно.',
-    //     development: 'BackEnd',
-    //     development1: 'Website front-end',
-    //     development2: 'Token smart contracts',
-    //     development3: 'Website front-end',
-    //     development4: 'Design',
-    //     development5: 'Branding',
-    //     development6: 'Ecosystem consulting',
-    // },
-    // {
-    //     name: 'ARDMONEY',
-    //     link: 'https://www.ardmoney.com/',
-    //     description: 'Монголын анхны DAO төсөл. Төвлөрсөн бус санхүүг Монголын болон Төв Азийн зах зээлд авчирч, крипто хэрэглэгчдийн хэрэглээнд нэвтрэх зорилготой.',
-    //     development: 'Branding',
-    //     development1: 'Ecosystem',
-    //     development2: 'Website front-end',
-    //     development3: 'Website back-end',
-    //     development4: 'Designs',
-    //     development5: 'Token smart contracts',
-    //     development6: 'DAP smart contracts ',
-    // },
 ]

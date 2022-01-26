@@ -13,73 +13,16 @@ import tseku from '../../assets/tseku.png'
 
 const Team = () => {
 
-    const Team = [
-        {
-            img: eegii,
-            name: 'М. Энх-Амгалан',
-            title: 'CEO',
-        },
-        {
-            img: odko,
-            name: 'Г. Мөнх-Од',
-            title: 'CTO',
-        },
-        {
-            img: bo,
-            name: 'М. Болортоль',
-            title: 'COO',
-        },
-        {
-            img: anhaa,
-            name: 'Д. Анхбаясгалан',
-            title: 'Advisor',
-        },
-        {
-            img: tulgaa,
-            name: 'Б. Баттулга',
-            title: 'FullStack Developer',
-        },
-        {
-            img: buri,
-            name: 'Б. Бүри',
-            title: 'DevOps',
-        },
-        {
-            img: tseku,
-            name: 'Т. Бумцэнд',
-            title: 'Designer',
-        },
-        {
-            img: muugii,
-            name: 'О. Мөнхзориг',
-            title: 'Developer',
-        },
-        {
-            img: zaya,
-            name: 'Ж. Амарзаяа',
-            title: 'Secretary',
-        },
-        {
-            img: amaraa,
-            name: 'А. Амартүвшин',
-            title: 'Blockchain Consultant',
-        },
-        {
-            img: Bataa,
-            name: 'Г. Ууганбат',
-            title: 'Developer',
-        },
-    ]
 
 
     return (
         <div className='w-full container mx-auto px-5'>
             <div className='hidden lg:block'>
-                <h1 id="Team" className='text-5xl text-center' style={{fontFamily: 'Magistral'}}>Манай хамт олон</h1>
+                <h1 id="Team" className='text-5xl text-center' style={{fontFamily: 'Magistral'}}>Members</h1>
             </div>
             <div className="hidden lg:block">
                 <div className="flex flex-wrap justify-center py-5 pt-10">
-                    {Team.map((i , index) => {
+                    {team.map((i , index) => {
                         return (
                             <div key={index} className='w-1/4  flex justify-center py-5'>
                                 {/* <div  className="flex justify-center items-center w-48 h-64 rounded-3xl " style={{ backgroundColor: '#FBFBFB', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}> */}
@@ -101,5 +44,64 @@ const Team = () => {
         </div>
     )
 }
+
+const team = [
+
+    {
+        img: eegii,
+        name: 'M. Enkhamgalan',
+        title: 'CEO',
+    },
+    {
+        img: odko,
+        name: 'G. Munkod',
+        title: 'CTO',
+    },
+    {
+        img: bo,
+        name: 'M. Bolortoli',
+        title: 'COO',
+    },
+    {
+        img: anhaa,
+        name: 'D. Ankhbayasgalan',
+        title: 'Advisor',
+    },
+    {
+        img: tulgaa,
+        name: 'B. Battulga',
+        title: 'FullStack Developer',
+    },
+    {
+        img: buri,
+        name: 'B. Buri',
+        title: 'DevOps',
+    },
+    {
+        img: tseku,
+        name: 'T. Bumtsend',
+        title: 'Designer',
+    },
+    {
+        img: muugii,
+        name: 'O. Munkhzorig',
+        title: 'Developer',
+    },
+    {
+        img: zaya,
+        name: 'J. Amarzaya',
+        title: 'Secretary',
+    },
+    {
+        img: amaraa,
+        name: 'A. Amartuvshin',
+        title: 'Blockchain Consultant',
+    },
+    {
+        img: Bataa,
+        name: 'G. Uuganbat',
+        title: 'Developer',
+    },
+]
 
 export default Team;
