@@ -120,6 +120,7 @@ function ContactUs() {
     setEmail(value);
     if (validateEmail(value)) {
       setEmailValidationFlag(true);
+      setBlankInputs(prev => prev.filter(val => val !== 'email'));
     } else {
       setEmailValidationFlag(false);
     }
