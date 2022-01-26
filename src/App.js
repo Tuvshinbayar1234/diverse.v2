@@ -60,35 +60,24 @@ function ContactUs() {
   let [name, setName] = useState('');
   let [phoneNumber, setPhoneNumber] = useState('');
   let [description, setDescription] = useState('');
-  let [emailValidationFlag, setEmailValidationFlag] = useState(false);
   let [isLoading, setIsLoading] = useState(false);
   let [innerSubmit, setInnerSubmit ] = useState('Send')
-  let [blankInputs, setBlankInputs] = useState([]);
+
+  let [emailValidationFlag, setEmailValidationFlag] = useState(false);
+  let [nameValidationFlag, setNameValidationFlag] = useState(false);
+  let [phoneNumberValidationFlag, setPhoneNumberValidationFlag] = useState(false);
+  let [descriptionValidationFlag, setDescriptionValidationFlag] = useState(false);
 
   async function submit() {
     // for fancy validation
+    if (!(validateEmail(email))) {
+      return;
+    }
     if (!(email && name && description && phoneNumber)) {
-      if (!email) {
-        setBlankInputs(prev => [...prev, 'email']);
-      } else {
-        setBlankInputs(prev => prev.filter(val => val !== 'email'));
-      }
-      if (!name) {
-        setBlankInputs(prev => [...prev, 'name']);
-      } else {
-        setBlankInputs(prev => prev.filter(val => val !== 'name'));
-      }
-      if (!phoneNumber) {
-        setBlankInputs(prev => [...prev, 'phoneNumber']);
-      } else {
-        setBlankInputs(prev => prev.filter(val => val !== 'phoneNumber'));
-      }
-      if (!description) {
-        setBlankInputs(prev => [...prev, 'description']);
-      } else {
-        setBlankInputs(prev => prev.filter(val => val !== 'description'));
-      }
-
+      if (!email) { setEmailValidationFlag(true); } else { setEmailValidationFlag(false); }
+      if (!name) { setNameValidationFlag(true); } else { setNameValidationFlag(false); }
+      if (!phoneNumber) { setPhoneNumberValidationFlag(true); } else { setPhoneNumberValidationFlag(false); }
+      if (!description) { setDescriptionValidationFlag(true); } else { setDescriptionValidationFlag(false); }
       setInnerSubmit('Try again')
       return;
     }
@@ -119,10 +108,9 @@ function ContactUs() {
     let value = e.target.value;
     setEmail(value);
     if (validateEmail(value)) {
-      setEmailValidationFlag(true);
-      setBlankInputs(prev => prev.filter(val => val !== 'email'));
-    } else {
       setEmailValidationFlag(false);
+    } else {
+      setEmailValidationFlag(true);
     }
   }
 
@@ -130,7 +118,7 @@ function ContactUs() {
     let value = e.target.value
     if (!value || validateNumber(value)) {
       setPhoneNumber(value);
-      setBlankInputs(prev => prev.filter(val => val !== 'phoneNumber'));
+      setPhoneNumberValidationFlag(false);
     }
   }
 
@@ -148,6 +136,21 @@ function ContactUs() {
     }
   }
 
+  function handleNameChange (e) {
+    setName(e.target.value)
+    if (e.target.value) {
+      setNameValidationFlag(false);
+    }
+  }
+
+  function handleDescriptionChange (e) {
+    setDescription(e.target.value)
+    if (e.target.value) {
+      setDescriptionValidationFlag(false);
+    }
+  }
+  
+
 
   return (
     <div className="container mx-auto py-20 ">
@@ -161,20 +164,16 @@ function ContactUs() {
               <div className='text-sm'>NAME</div>
               <input
                 placeholder='John Doe'
-                className={`w-72 font-thin ${blankInputs.includes('name') ? 'border-red-400' : ' '} outline-none border-b px-2 pt-1 pb-2 focus:border-black `}
+                className={`w-72 font-thin ${nameValidationFlag ? 'border-red-400 focus:border-red-400' : 'focus:border-black '} outline-none border-b px-2 pt-1 pb-2  `}
                 type="text"
-                onChange={(e) => {
-                  setName(e.target.value)
-                  setBlankInputs(prev => prev.filter(val => val !== 'name'))
-                }
-                }
+                onChange={(e) => handleNameChange(e)}
               />
             </div>
             <div>
               <div className='text-sm'>E-MAIL</div>
               <input
                 placeholder='foobar@baz.com'
-                className={` ${emailValidationFlag ? 'focus:border-black' : 'focus:border-red-400'} ${blankInputs.includes('email') ? 'border-red-400' : ''} w-72 font-thin outline-none border-b px-2 pt-1 pb-2  `} type="text"
+                className={` ${emailValidationFlag ? 'border-red-400 focus:border-red-400' : 'focus:border-black'}  w-72 font-thin outline-none border-b px-2 pt-1 pb-2  `} type="text"
                 value={email}
                 onChange={(e) => handleEmailChange(e)}
               />
@@ -185,12 +184,9 @@ function ContactUs() {
             <textarea
               placeholder='Foo bar baz..'
               rows='1'
-              className={`${blankInputs.includes('description') ? 'border-red-400' : ' '} w-full font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black `}
+              className={`${descriptionValidationFlag ? 'border-red-400 focus:border-red-400' : ' focus:border-black'} w-full font-thin outline-none border-b px-2 pt-1 pb-2 `}
               type="text"
-              onChange={(e) => {
-                setDescription(e.target.value)
-                setBlankInputs(prev => prev.filter(val => val !== 'description'))
-              }}
+              onChange={(e) => handleDescriptionChange(e)}
             />
           </div>
         </div>
@@ -199,7 +195,7 @@ function ContactUs() {
             <div className='text-sm'>PHONE NUMBER</div>
             <input
               placeholder='99887766'
-              className={`${blankInputs.includes('phoneNumber') ? 'border-red-400' : ' '} w-72 font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black `}
+              className={`${ phoneNumberValidationFlag ? 'border-red-400 focus:border-red-400' : ' focus:border-black'} w-72 font-thin outline-none border-b px-2 pt-1 pb-2  `}
               type="text"
               value={phoneNumber}
               onChange={(e) => handlePhoneNumberChange(e)}
@@ -218,19 +214,16 @@ function ContactUs() {
           <div className='text-sm'>NAME</div>
           <input
             placeholder='John Doe'
-            className={`${blankInputs.includes('name') ? 'border-red-400' : ' '} font-thin w-full outline-none border-b px-2 pt-1 pb-2 focus:border-black `}
+            className={`${nameValidationFlag ? 'border-red-400 focus:border-red-400' : ' focus:border-black'} font-thin w-full outline-none border-b px-2 pt-1 pb-2  `}
             type="text"
-            onChange={(e) => {
-              setName(e.target.value)
-              setBlankInputs(prev => prev.filter(val => val !== 'name'))
-            }}
+            onChange={(e) => handleNameChange(e)}
           />
         </div>
         <div>
           <div className='text-sm'>E-MAIL</div>
           <input
             placeholder='foobar@baz.com'
-            className={`w-full ${emailValidationFlag ? 'focus:border-black' : 'focus:border-red-400'} ${blankInputs.includes('email') ? 'border-red-400' : ' '}  font-thin outline-none border-b px-2 pt-1 pb-2  `} type="text"
+            className={`w-full ${emailValidationFlag ? 'border-red-400 focus:border-red-400' : ' focus:border-black'}  font-thin outline-none border-b px-2 pt-1 pb-2  `} type="text"
             value={email}
             onChange={(e) => handleEmailChange(e)}
           />
@@ -239,7 +232,7 @@ function ContactUs() {
           <div className='text-sm'>PHONE NUMBER</div>
           <input
             placeholder='99887766'
-            className={`${blankInputs.includes('phoneNumber') ? 'border-red-400' : ' '} w-full font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black `}
+            className={`${phoneNumberValidationFlag ? 'border-red-400 focus:border-red-400' : ' focus:border-black'} w-full font-thin outline-none border-b px-2 pt-1 pb-2 `}
             type="text"
             value={phoneNumber}
             onChange={(e) => handlePhoneNumberChange(e)}
@@ -250,12 +243,9 @@ function ContactUs() {
           <textarea
             placeholder='Foo bar baz..'
             rows='1'
-            className={` ${blankInputs.includes('description') ? 'border-red-400' : ' '} w-full font-thin outline-none border-b px-2 pt-1 pb-2 focus:border-black `}
+            className={` ${descriptionValidationFlag ? 'border-red-400 focus:border-red-400' : ' focus:border-black'} w-full font-thin outline-none border-b px-2 pt-1 pb-2  `}
             type="text"
-            onChange={(e) => {
-              setDescription(e.target.value)
-              setBlankInputs(prev => prev.filter(val => val !== 'description'))
-            }}
+            onChange={(e) => handleDescriptionChange(e)}
           />
         </div>
         <div className='pt-5'>
@@ -263,7 +253,7 @@ function ContactUs() {
             onClick={submit}
             className={`w-full py-4 rounded-md ${innerSubmit === 'Sent' ? 'bg-green-500' : 'bg-blue-500'} hover:opacity-90 text-center text-white font-medium`}
           >
-          {submitTextRenderer()}
+            {submitTextRenderer()}
           </button>
         </div>
       </div>
