@@ -24,8 +24,8 @@ function App(){
       {/* <Nav /> */}
       {/* <Cursor /> */}
       <div className="container mx-auto min-h-screen relative  px-5 flex items-center">
-        <div className='absolute left-1/2 top-10 transform -translate-x-1/2'>
-          <img className='w-20 h-20 object-contain' src={dsLogo} alt="logo" />
+        <div className='absolute left-1/2 top-14 lg:top-20 transform -translate-x-1/2'>
+          <img className='w-28 h-28 object-contain' src={dsLogo} alt="logo" />
         </div>
         <div className="flex  w-full justify-evenly" style={{ fontFamily: 'Magistral' }}>
           <div className='w-full sm:w-1/2 flex justify-center text-5xl lg:text-7xl xl:text-8xl'>
@@ -82,15 +82,17 @@ function ContactUs() {
       return;
     }
 
+
     if (innerSubmit !== 'Sent') {
       setIsLoading(true);
       try {
-        let res = await axios.post(process.env.REACT_APP_MESSAGE_SERVICE_ENDPOINT, {
+        let res = await axios.post("https://mail.dsolutions.mn/email", {
           email,
           name,
           phoneNumber,
           description
         })
+
         console.log(res)
         setInnerSubmit('Sent')
       } catch (e) {
@@ -136,20 +138,20 @@ function ContactUs() {
     }
   }
 
-  function handleNameChange (e) {
+  function handleNameChange(e) {
     setName(e.target.value)
     if (e.target.value) {
       setNameValidationFlag(false);
     }
   }
 
-  function handleDescriptionChange (e) {
+  function handleDescriptionChange(e) {
     setDescription(e.target.value)
     if (e.target.value) {
       setDescriptionValidationFlag(false);
     }
   }
-  
+
 
 
   return (

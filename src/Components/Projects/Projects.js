@@ -92,7 +92,7 @@ export default function Projects() {
                                         {(selectedProject === 1 || selectedProject === 3) && <BlankSpace />}
                                     </div>
                                     <div className={`px-10 xl:px-16 h-1/2  flex flex-col justify-center`}>
-                                        <h3>{projects[selectedProject].name}</h3>
+                                        <a href={projects[selectedProject].link} target="_blank" className='underline'>{projects[selectedProject].name}</a>
                                         <p className='mt-2'>{projects[selectedProject].description}</p>
                                     </div>
                                 </div>
