@@ -36,7 +36,7 @@ function App(){
               <span>Connection</span>
             </h1>
           </div>
-          <div className="w-full h-full sm:h-auto sm:w-1/2 absolute sm:static opacity-10 sm:opacity-100 px-5 sm:px-0  top-0  flex items-center sm:justify-end">
+          <div className="w-full h-full sm:h-auto sm:w-1/2 absolute sm:static opacity-10 sm:opacity-100 px-5 sm:px-0 top-0  flex items-center sm:justify-center">
             <ChainSvg />
           </div>
         </div>
