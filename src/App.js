@@ -25,7 +25,7 @@ function App(){
       {/* <Cursor /> */}
       <div className="container mx-auto min-h-screen relative  px-5 flex items-center">
         <div className='absolute left-1/2 top-14 lg:top-20 transform -translate-x-1/2'>
-          <img className='w-28 h-28 object-contain' src={dsLogo} alt="logo" />
+          <img className='w-20 h-20 object-contain' src={dsLogo} alt="logo" />
         </div>
         <div className="flex  w-full justify-evenly" style={{ fontFamily: 'Magistral' }}>
           <div className='w-full sm:w-1/2 flex justify-center text-5xl lg:text-7xl xl:text-8xl'>

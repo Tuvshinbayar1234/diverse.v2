@@ -37,7 +37,7 @@ export default function Projects() {
 
     return (
         <div className='container mx-auto pb-40 lg:py-40'>
-            <div className='flex flex-col px-5 md:px-0 lg:flex-row items-center'>
+            <div className='flex flex-col px-5 lg:flex-row items-center'>
                 <div style={{ fontFamily: 'MagistralRegular' }} className='flex  lg:pr-28 xl:pr-36 2xl:pr-44 flex-col w-full lg:w-1/2'>
                     <h2 className='text-5xl font-bold mb-10' style={{ fontFamily: 'Magistral' }}>Projects</h2>
                     <div>
