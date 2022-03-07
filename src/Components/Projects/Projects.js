@@ -155,10 +155,10 @@ const projectImages = [
         component: <img className='w-40 h-40' src={Krypto} alt="dax" />
     },
     {
-        component: <img className='w-40 h-40' src={Mont} alt="dax" />
+        component: <img className='w-40 h-40' src={ARDMs} alt="dax" />
     },
     {
-        component: <img className='w-40 h-40' src={ARDMs} alt="dax" />
+        component: <img className='w-40 h-40' src={Mont} alt="dax" />
     },
 ]
 
@@ -175,7 +175,7 @@ const projects = [
     },
     {
         name: 'KryptoMN',
-        link: '',
+        link: 'https://krypto.mn/',
         description: 'KryptoMN is a Mongolian media focused on providing an all-in-one source of truth for cryptocurrencies and other blockchain-based innovations.',
         listsLeft: [
             'Front-End Code',

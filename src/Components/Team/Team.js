@@ -54,7 +54,7 @@ const team = [
     },
     {
         img: odko,
-        name: 'G. Munkod',
+        name: 'G. Munkhod',
         title: 'CTO',
     },
     {
@@ -76,11 +76,6 @@ const team = [
         img: buri,
         name: 'B. Buri',
         title: 'DevOps',
-    },
-    {
-        img: tseku,
-        name: 'T. Bumtsend',
-        title: 'Designer',
     },
     {
         img: muugii,
