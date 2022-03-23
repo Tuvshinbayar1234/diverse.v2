@@ -123,7 +123,7 @@ const team = [
     {
         img: amaraa,
         name: 'A. Amartuvshin',
-        title: 'Blockchain Consultant',
+        title: 'Business Analyst',
     },
     {
         img: Bataa,
